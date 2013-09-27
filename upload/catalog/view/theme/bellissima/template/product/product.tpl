@@ -218,7 +218,7 @@
       </div>
       <?php if ($review_status) { ?>
       <div class="review">
-        <div><img src="catalog/view/theme/default/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
+        <div><img src="catalog/view/theme/bellissima/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div>
         <div class="share"><!-- AddThis Button BEGIN -->
           <div class="addthis_default_style"><a class="addthis_button_compact"><?php echo $text_share; ?></a> <a class="addthis_button_email"></a><a class="addthis_button_print"></a> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a></div>
           <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js"></script> 
@@ -314,7 +314,7 @@
         </div>
         <?php } ?>
         <?php if ($product['rating']) { ?>
-        <div class="rating"><img src="catalog/view/theme/default/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" /></div>
+        <div class="rating"><img src="catalog/view/theme/bellissima/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" /></div>
         <?php } ?>
         <a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button"><?php echo $button_cart; ?></a></div>
       <?php } ?>
@@ -361,7 +361,7 @@ $('#button-cart').bind('click', function() {
 			} 
 			
 			if (json['success']) {
-				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/default/image/close.png" alt="" class="close" /></div>');
+				$('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<img src="catalog/view/theme/bellissima/image/close.png" alt="" class="close" /></div>');
 					
 				$('.success').fadeIn('slow');
 					
@@ -384,7 +384,7 @@ new AjaxUpload('#button-option-<?php echo $option['product_option_id']; ?>', {
 	autoSubmit: true,
 	responseType: 'json',
 	onSubmit: function(file, extension) {
-		$('#button-option-<?php echo $option['product_option_id']; ?>').after('<img src="catalog/view/theme/default/image/loading.gif" class="loading" style="padding-left: 5px;" />');
+		$('#button-option-<?php echo $option['product_option_id']; ?>').after('<img src="catalog/view/theme/bellissima/image/loading.gif" class="loading" style="padding-left: 5px;" />');
 		$('#button-option-<?php echo $option['product_option_id']; ?>').attr('disabled', true);
 	},
 	onComplete: function(file, json) {
@@ -431,7 +431,7 @@ $('#button-review').bind('click', function() {
 		beforeSend: function() {
 			$('.success, .warning').remove();
 			$('#button-review').attr('disabled', true);
-			$('#review-title').after('<div class="attention"><img src="catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+			$('#review-title').after('<div class="attention"><img src="catalog/view/theme/bellissima/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
 		},
 		complete: function() {
 			$('#button-review').attr('disabled', false);

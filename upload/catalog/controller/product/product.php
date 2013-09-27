@@ -276,6 +276,7 @@ class ControllerProductProduct extends Controller {
 			$this->data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$this->data['model'] = $product_info['model'];
 			$this->data['reward'] = $product_info['reward'];
+            $this->data['upc'] = $product_info['upc'];
 			$this->data['points'] = $product_info['points'];
 			
 			if ($product_info['quantity'] <= 0) {

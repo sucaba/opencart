@@ -11,7 +11,7 @@ body {
 	padding: 0px;
 }
 body, td, th, input, textarea, select, a {
-	font-size: 12px;
+	font-size: 13px;
 }
 h1, .welcome {
 	color: #636E75;
@@ -98,7 +98,7 @@ label {
 }
 #header #logo {
 	position: absolute;
-	top: 25px;
+	top: 5px;
 	left: 15px;
 }
 #language {
@@ -804,7 +804,7 @@ ul.box-filter > li ul {
 }
 .category-list ul {
 	float: left;
-	width: 18%;
+	width: 50%;
 }
 /* manufacturer */
 .manufacturer-list {
@@ -1595,8 +1595,8 @@ ul.box-filter > li ul {
 #footer {
 	clear: both;
 	overflow: auto;
-	min-height: 100px;
-	padding: 20px;
+	min-height: 20px;
+	padding: 5px;
 	border-top: 1px solid #DBDEE1;
 	border-bottom: 1px solid #DBDEE1;
 	background: #F8F8F8;
@@ -1610,7 +1610,7 @@ ul.box-filter > li ul {
 #footer .column {
 	float: left;
 	width: 25%;
-	min-height: 100px;
+	min-height: 60px;
 }
 #footer .column ul {
 	margin-top: 0px;

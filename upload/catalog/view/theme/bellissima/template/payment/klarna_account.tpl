@@ -16,7 +16,7 @@
           <?php } ?></td>
         <td><label for="plan-id<?php echo $payment_option['code']; ?>"><?php echo $payment_option['title']; ?></label></td>
         <td style="width: 1%;"><?php if ($iso_code_3 == 'NLD') { ?>
-          <img src="catalog/view/theme/default/image/klarna_nld_banner.png" />
+          <img src="catalog/view/theme/bellissima/image/klarna_nld_banner.png" />
           <?php } ?></td>
       </tr>
       <?php } ?>
@@ -114,7 +114,7 @@ $('#button-confirm').on('click', function() {
 			
 			$('.warning, .error').remove();	
 			
-			$('#payment').before('<div class="attention"><img src="catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+			$('#payment').before('<div class="attention"><img src="catalog/view/theme/bellissima/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
 		},
 		complete: function() {
 			$('#button-confirm').attr('disabled', false);
