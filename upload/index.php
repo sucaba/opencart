@@ -1,6 +1,8 @@
 <?php
 // Version
-define('VERSION', '1.5.5.1');
+define('VERSION', '1.5.6');
+
+/* Testing non-beta */
 
 // Configuration
 if (file_exists('config.php')) {
@@ -211,17 +213,24 @@ $registry->set('length', new Length($registry));
 // Cart
 $registry->set('cart', new Cart($registry));
 
+//OpenBay Pro
+$registry->set('openbay', new Openbay($registry));
+$registry->set('play', new Play($registry));
+$registry->set('ebay', new Ebay($registry));
+$registry->set('amazon', new Amazon($registry));
+$registry->set('amazonus', new Amazonus($registry));
+
 // Encryption
 $registry->set('encryption', new Encryption($config->get('config_encryption')));
 		
 // Front Controller 
 $controller = new Front($registry);
 
-// SEO URL's
-$controller->addPreAction(new Action('common/seo_url'));	
-
 // Maintenance Mode
 $controller->addPreAction(new Action('common/maintenance'));
+
+// SEO URL's
+$controller->addPreAction(new Action('common/seo_url'));	
 	
 // Router
 if (isset($request->get['route'])) {
