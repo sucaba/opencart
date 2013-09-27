@@ -1301,6 +1301,9 @@ class ControllerCatalogProduct extends Controller {
       		if ((utf8_strlen($value['name']) < 1) || (utf8_strlen($value['name']) > 255)) {
         		$this->error['name'][$language_id] = $this->language->get('error_name');
       		}
+
+            /* Make product_description.name optional for secondary languages */
+            break;
     	}
 		
     	if ((utf8_strlen($this->request->post['model']) < 1) || (utf8_strlen($this->request->post['model']) > 64)) {
