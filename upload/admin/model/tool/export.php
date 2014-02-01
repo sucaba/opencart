@@ -255,7 +255,6 @@ class ModelToolExport extends Model {
 		$sql .= "DELETE FROM `".DB_PREFIX."manufacturer_to_store`;\n";
 		$sql .= "DELETE FROM `".DB_PREFIX."url_alias` WHERE `query` LIKE 'product_id=%';\n";
 		$sql .= "DELETE FROM `".DB_PREFIX."product_related`;\n";
-		$sql .= "DELETE FROM `".DB_PREFIX."product_tag` WHERE language_id=$languageId;\n";
 		$sql .= "DELETE FROM `".DB_PREFIX."product_to_layout`;\n";
 		$this->import( $database, $sql );
 		
@@ -318,14 +317,11 @@ class ModelToolExport extends Model {
 			$storeIds = $product['store_ids'];
 			$layout = $product['layout'];
 			$related = $product['related_ids'];
-			$tags = array();
-			foreach ($product['tags'] as $tag) {
-				$tags[] = $database->escape($tag);
-			}
 			$subtract = $product['subtract'];
 			$subtract = ((strtoupper($subtract)=="TRUE") || (strtoupper($subtract)=="YES") || (strtoupper($subtract)=="ENABLED")) ? 1 : 0;
 			$minimum = $product['minimum'];
 			$meta_keywords = $database->escape($product['meta_keywords']);
+            $tag = $database->escape($product['tag']);
 			$sort_order = $product['sort_order'];
 			$sql  = "INSERT INTO `".DB_PREFIX."product` (`product_id`,`quantity`,`sku`,`upc`,`location`,";
 			$sql .= "`stock_status_id`,`model`,`manufacturer_id`,`image`,`shipping`,`price`,`points`,`date_added`,`date_modified`,`date_available`,`weight`,`weight_class_id`,`status`,";
@@ -395,27 +391,6 @@ class ModelToolExport extends Model {
 				}
 				$sql .= ";";
 				$database->query($sql);
-			}
-			if (count($tags) > 0) {
-				$sql = "INSERT INTO `".DB_PREFIX."product_tag` (`product_id`,`tag`,`language_id`) VALUES ";
-				$first = TRUE;
-				$inserted_tags = array();
-				foreach ($tags as $tag) {
-					if ($tag == '') {
-						continue;
-					}
-					if (in_array($tag,$inserted_tags)) {
-						continue;
-					}
-					$sql .= ($first) ? "\n" : ",\n";
-					$first = FALSE;
-					$sql .= "($productId,'".$database->escape($tag)."',$languageId)";
-					$inserted_tags[] = $tag;
-				}
-				$sql .= ";";
-				if (count($inserted_tags)>0) {
-					$database->query($sql);
-				}
 			}
 		}
 		
@@ -498,7 +473,7 @@ class ModelToolExport extends Model {
 			$storeIds = $this->getCell($data,$i,$j++);
 			$layout = $this->getCell($data,$i,$j++);
 			$related = $this->getCell($data,$i,$j++);
-			$tags = $this->getCell($data,$i,$j++);
+			$tag = $this->getCell($data,$i,$j++);
 			$sort_order = $this->getCell($data,$i,$j++,'0');
 			$subtract = $this->getCell($data,$i,$j++,'true');
 			$minimum = $this->getCell($data,$i,$j++,'1');
@@ -550,10 +525,7 @@ class ModelToolExport extends Model {
 			if ($product['layout']===FALSE) {
 				$product['layout'] = array();
 			}
-			$product['tags'] = ($tags=="") ? array() : explode( ",", $tags );
-			if ($product['tags']===FALSE) {
-				$product['tags'] = array();
-			}
+			$product['tag'] = $tag;
 			$product['subtract'] = $subtract;
 			$product['minimum'] = $minimum;
 			$product['meta_keywords'] = $meta_keywords;
@@ -1097,35 +1069,6 @@ class ModelToolExport extends Model {
 		$sql .= "DELETE FROM `".DB_PREFIX."product_special`;\n";
 		$this->import( $database, $sql );
 
-		// find existing customer groups from the database
-		$sql = "SELECT * FROM `".DB_PREFIX."customer_group`";
-		$result = $database->query( $sql );
-		$maxCustomerGroupId = 0;
-		$customerGroups = array();
-		foreach ($result->rows as $row) {
-			$customerGroupId = $row['customer_group_id'];
-			$name = $row['name'];
-			if (!isset($customerGroups[$name])) {
-				$customerGroups[$name] = $customerGroupId;
-			}
-			if ($maxCustomerGroupId < $customerGroupId) {
-				$maxCustomerGroupId = $customerGroupId;
-			}
-		}
-
-		// add additional customer groups into the database
-		foreach ($specials as $special) {
-			$name = $special['customer_group'];
-			if (!isset($customerGroups[$name])) {
-				$maxCustomerGroupId += 1;
-				$sql  = "INSERT INTO `".DB_PREFIX."customer_group` (`customer_group_id`, `name`) VALUES "; 
-				$sql .= "($maxCustomerGroupId, '$name')";
-				$sql .= ";\n";
-				$database->query($sql);
-				$customerGroups[$name] = $maxCustomerGroupId;
-			}
-		}
-
 		// store product specials into the database
 		$productSpecialId = 0;
 		$first = TRUE;
@@ -1133,8 +1076,7 @@ class ModelToolExport extends Model {
 		foreach ($specials as $special) {
 			$productSpecialId += 1;
 			$productId = $special['product_id'];
-			$name = $special['customer_group'];
-			$customerGroupId = $customerGroups[$name];
+			$customerGroupId = $special['customer_group_id'];
 			$priority = $special['priority'];
 			$price = $special['price'];
 			$dateStart = $special['date_start'];
@@ -1169,8 +1111,8 @@ class ModelToolExport extends Model {
 			if ($productId=="") {
 				continue;
 			}
-			$customerGroup = trim($this->getCell($data,$i,$j++));
-			if ($customerGroup=="") {
+			$customerGroupId = trim($this->getCell($data,$i,$j++));
+			if ($customerGroupId=="") {
 				continue;
 			}
 			$priority = $this->getCell($data,$i,$j++,'0');
@@ -1179,7 +1121,7 @@ class ModelToolExport extends Model {
 			$dateEnd = $this->getCell($data,$i,$j++,'0000-00-00');
 			$specials[$i] = array();
 			$specials[$i]['product_id'] = $productId;
-			$specials[$i]['customer_group'] = $customerGroup;
+			$specials[$i]['customer_group_id'] = $customerGroupId;
 			$specials[$i]['priority'] = $priority;
 			$specials[$i]['price'] = $price;
 			$specials[$i]['date_start'] = $dateStart;
@@ -1195,6 +1137,7 @@ class ModelToolExport extends Model {
 		$sql .= "DELETE FROM `".DB_PREFIX."product_discount`;\n";
 		$this->import( $database, $sql );
 
+/*
 		// find existing customer groups from the database
 		$sql = "SELECT * FROM `".DB_PREFIX."customer_group`";
 		$result = $database->query( $sql );
@@ -1223,7 +1166,7 @@ class ModelToolExport extends Model {
 				$customerGroups[$name] = $maxCustomerGroupId;
 			}
 		}
-
+ */
 		// store product discounts into the database
 		$productDiscountId = 0;
 		$first = TRUE;
@@ -1231,8 +1174,7 @@ class ModelToolExport extends Model {
 		foreach ($discounts as $discount) {
 			$productDiscountId += 1;
 			$productId = $discount['product_id'];
-			$name = $discount['customer_group'];
-			$customerGroupId = $customerGroups[$name];
+			$customerGroupId = $discount['customer_group_id'];
 			$quantity = $discount['quantity'];
 			$priority = $discount['priority'];
 			$price = $discount['price'];
@@ -1268,8 +1210,8 @@ class ModelToolExport extends Model {
 			if ($productId=="") {
 				continue;
 			}
-			$customerGroup = trim($this->getCell($data,$i,$j++));
-			if ($customerGroup=="") {
+			$customerGroupId = trim($this->getCell($data,$i,$j++));
+			if ($customerGroupId=="") {
 				continue;
 			}
 			$quantity = $this->getCell($data,$i,$j++,'0');
@@ -1279,7 +1221,7 @@ class ModelToolExport extends Model {
 			$dateEnd = $this->getCell($data,$i,$j++,'0000-00-00');
 			$discounts[$i] = array();
 			$discounts[$i]['product_id'] = $productId;
-			$discounts[$i]['customer_group'] = $customerGroup;
+			$discounts[$i]['customer_group_id'] = $customerGroupId;
 			$discounts[$i]['quantity'] = $quantity;
 			$discounts[$i]['priority'] = $priority;
 			$discounts[$i]['price'] = $price;
@@ -1298,6 +1240,7 @@ class ModelToolExport extends Model {
 		$this->import( $database, $sql );
 
 		// find existing customer groups from the database
+        /*
 		$sql = "SELECT * FROM `".DB_PREFIX."customer_group`";
 		$result = $database->query( $sql );
 		$maxCustomerGroupId = 0;
@@ -1312,8 +1255,10 @@ class ModelToolExport extends Model {
 				$maxCustomerGroupId = $customerGroupId;
 			}
 		}
+        */
 
 		// add additional customer groups into the database
+        /* TODO: It will take time to convert all customer_groups because table was completely changed.
 		foreach ($rewards as $reward) {
 			$name = $reward['customer_group'];
 			if (!isset($customerGroups[$name])) {
@@ -1325,6 +1270,7 @@ class ModelToolExport extends Model {
 				$customerGroups[$name] = $maxCustomerGroupId;
 			}
 		}
+         */
 
 		// store product rewards into the database
 		$productRewardId = 0;
@@ -1333,8 +1279,7 @@ class ModelToolExport extends Model {
 		foreach ($rewards as $reward) {
 			$productRewardId += 1;
 			$productId = $reward['product_id'];
-			$name = $reward['customer_group'];
-			$customerGroupId = $customerGroups[$name];
+			$customerGroupId = $reward['customer_group_id'];
 			$points = $reward['points'];
 			$sql .= ($first) ? "\n" : ",\n";
 			$first = FALSE;
@@ -1366,14 +1311,14 @@ class ModelToolExport extends Model {
 			if ($productId=="") {
 				continue;
 			}
-			$customerGroup = trim($this->getCell($data,$i,$j++));
-			if ($customerGroup=="") {
+			$customerGroupId = trim($this->getCell($data,$i,$j++));
+			if ($customerGroupId=="") {
 				continue;
 			}
 			$points = $this->getCell($data,$i,$j++,'0');
 			$rewards[$i] = array();
 			$rewards[$i]['product_id'] = $productId;
-			$rewards[$i]['customer_group'] = $customerGroup;
+			$rewards[$i]['customer_group_id'] = $customerGroupId;
 			$rewards[$i]['points'] = $points;
 		}
 		return $this->storeRewardsIntoDatabase( $database, $rewards );
@@ -1464,7 +1409,7 @@ class ModelToolExport extends Model {
 	function validateProducts( &$reader )
 	{
 		$expectedProductHeading = array
-		( "product_id", "name", "categories", "sku", "upc", "location", "quantity", "model", "manufacturer", "image_name", "requires\nshipping", "price", "points", "date_added", "date_modified", "date_available", "weight", "unit", "length", "width", "height", "length\nunit", "status\nenabled", "tax_class_id", "viewed", "language_id", "seo_keyword", "description", "meta_description", "meta_keywords", "additional image names", "stock_status_id", "store_ids", "layout", "related_ids", "tags", "sort_order", "subtract", "minimum" );
+		( "product_id", "name", "categories", "sku", "upc", "location", "quantity", "model", "manufacturer", "image_name", "requires\nshipping", "price", "points", "date_added", "date_modified", "date_available", "weight", "unit", "length", "width", "height", "length\nunit", "status\nenabled", "tax_class_id", "viewed", "language_id", "seo_keyword", "description", "meta_description", "meta_keywords", "additional image names", "stock_status_id", "store_ids", "layout", "related_ids", "tag", "sort_order", "subtract", "minimum" );
 		$data =& $reader->getSheet(1);
 		return $this->validateHeading( $data, $expectedProductHeading );
 	}
@@ -1491,7 +1436,7 @@ class ModelToolExport extends Model {
 	function validateSpecials( &$reader )
 	{
 		$expectedSpecialsHeading = array
-		( "product_id", "customer_group", "priority", "price", "date_start", "date_end" );
+		( "product_id", "customer_group_id", "priority", "price", "date_start", "date_end" );
 		$data =& $reader->getSheet(4);
 		return $this->validateHeading( $data, $expectedSpecialsHeading );
 	}
@@ -1500,7 +1445,7 @@ class ModelToolExport extends Model {
 	function validateDiscounts( &$reader )
 	{
 		$expectedDiscountsHeading = array
-		( "product_id", "customer_group", "quantity", "priority", "price", "date_start", "date_end" );
+		( "product_id", "customer_group_id", "quantity", "priority", "price", "date_start", "date_end" );
 		$data =& $reader->getSheet(5);
 		return $this->validateHeading( $data, $expectedDiscountsHeading );
 	}
@@ -1509,7 +1454,7 @@ class ModelToolExport extends Model {
 	function validateRewards( &$reader )
 	{
 		$expectedRewardsHeading = array
-		( "product_id", "customer_group", "points" );
+		( "product_id", "customer_group_id", "points" );
 		$data =& $reader->getSheet(6);
 		return $this->validateHeading( $data, $expectedRewardsHeading );
 	}
@@ -1837,7 +1782,7 @@ class ModelToolExport extends Model {
 		$worksheet->setColumn($j,$j++,max(strlen('store_ids'),16)+1,$textFormat);
 		$worksheet->setColumn($j,$j++,max(strlen('layout'),16)+1,$textFormat);
 		$worksheet->setColumn($j,$j++,max(strlen('related_ids'),16)+1,$textFormat);
-		$worksheet->setColumn($j,$j++,max(strlen('tags'),32)+1,$textFormat);
+		$worksheet->setColumn($j,$j++,max(strlen('tag'),32)+1,$textFormat);
 		$worksheet->setColumn($j,$j++,max(strlen('sort_order'),8)+1);
 		$worksheet->setColumn($j,$j++,max(strlen('subtract'),5)+1,$textFormat);
 		$worksheet->setColumn($j,$j++,max(strlen('minimum'),8)+1);
@@ -1880,7 +1825,7 @@ class ModelToolExport extends Model {
 		$worksheet->writeString( $i, $j++, 'store_ids', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'layout', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'related_ids', $boxFormat );
-		$worksheet->writeString( $i, $j++, 'tags', $boxFormat );
+		$worksheet->writeString( $i, $j++, 'tag', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'sort_order', $boxFormat );
 		$worksheet->writeString( $i, $j++, "subtract", $boxFormat );
 		$worksheet->writeString( $i, $j++, 'minimum', $boxFormat );
@@ -1927,7 +1872,7 @@ class ModelToolExport extends Model {
 		$query .= "  p.subtract, ";
 		$query .= "  p.minimum, ";
 		$query .= "  GROUP_CONCAT( DISTINCT CAST(pr.related_id AS CHAR(11)) SEPARATOR \",\" ) AS related, ";
-		$query .= "  GROUP_CONCAT( DISTINCT pt.tag SEPARATOR \",\" ) AS tags ";
+		$query .= "  pd.tag ";
 		$query .= "FROM `".DB_PREFIX."product` p ";
 		$query .= "LEFT JOIN `".DB_PREFIX."product_description` pd ON p.product_id=pd.product_id ";
 		$query .= "  AND pd.language_id=$languageId ";
@@ -1939,8 +1884,6 @@ class ModelToolExport extends Model {
 		$query .= "LEFT JOIN `".DB_PREFIX."length_class_description` mc ON mc.length_class_id=p.length_class_id ";
 		$query .= "  AND mc.language_id=$languageId ";
 		$query .= "LEFT JOIN `".DB_PREFIX."product_related` pr ON pr.product_id=p.product_id ";
-		$query .= "LEFT JOIN `".DB_PREFIX."product_tag` pt ON pt.product_id=p.product_id ";
-		$query .= "  AND pt.language_id=$languageId ";
 		$query .= "GROUP BY p.product_id ";
 		$query .= "ORDER BY p.product_id, pc.category_id; ";
 		$result = $database->query( $query );
@@ -2005,7 +1948,7 @@ class ModelToolExport extends Model {
 			}
 			$worksheet->write( $i, $j++, $layoutList, $textFormat );
 			$worksheet->write( $i, $j++, $row['related'], $textFormat );
-			$worksheet->write( $i, $j++, $row['tags'], $textFormat );
+			$worksheet->write( $i, $j++, $row['tag'], $textFormat );
 			$worksheet->write( $i, $j++, $row['sort_order'] );
 			$worksheet->write( $i, $j++, ($row['subtract']==0) ? "false" : "true", $textFormat );
 			$worksheet->write( $i, $j++, $row['minimum'] );
@@ -2163,7 +2106,7 @@ class ModelToolExport extends Model {
 		// Set the column widths
 		$j = 0;
 		$worksheet->setColumn($j,$j++,strlen('product_id')+1);
-		$worksheet->setColumn($j,$j++,strlen('customer_group')+1);
+		$worksheet->setColumn($j,$j++,strlen('customer_group_id')+1);
 		$worksheet->setColumn($j,$j++,strlen('priority')+1);
 		$worksheet->setColumn($j,$j++,max(strlen('price'),10)+1,$priceFormat);
 		$worksheet->setColumn($j,$j++,max(strlen('date_start'),19)+1,$textFormat);
@@ -2173,7 +2116,7 @@ class ModelToolExport extends Model {
 		$i = 0;
 		$j = 0;
 		$worksheet->writeString( $i, $j++, 'product_id', $boxFormat );
-		$worksheet->writeString( $i, $j++, 'customer_group', $boxFormat );
+		$worksheet->writeString( $i, $j++, 'customer_group_id', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'priority', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'price', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'date_start', $boxFormat );
@@ -2183,14 +2126,13 @@ class ModelToolExport extends Model {
 		// The actual product specials data
 		$i += 1;
 		$j = 0;
-		$query  = "SELECT ps.*, cg.name FROM `".DB_PREFIX."product_special` ps ";
-		$query .= "LEFT JOIN `".DB_PREFIX."customer_group` cg ON cg.customer_group_id=ps.customer_group_id ";
-		$query .= "ORDER BY ps.product_id, cg.name";
+		$query  = "SELECT ps.* FROM `".DB_PREFIX."product_special` ps ";
+		$query .= "ORDER BY ps.product_id, ps.customer_group_id";
 		$result = $database->query( $query );
 		foreach ($result->rows as $row) {
 			$worksheet->setRow( $i, 13 );
 			$worksheet->write( $i, $j++, $row['product_id'] );
-			$worksheet->write( $i, $j++, $row['name'] );
+			$worksheet->write( $i, $j++, $row['customer_group_id'] );
 			$worksheet->write( $i, $j++, $row['priority'] );
 			$worksheet->write( $i, $j++, $row['price'], $priceFormat );
 			$worksheet->write( $i, $j++, $row['date_start'], $textFormat );
@@ -2206,7 +2148,7 @@ class ModelToolExport extends Model {
 		// Set the column widths
 		$j = 0;
 		$worksheet->setColumn($j,$j++,strlen('product_id')+1);
-		$worksheet->setColumn($j,$j++,strlen('customer_group')+1);
+		$worksheet->setColumn($j,$j++,strlen('customer_group_id')+1);
 		$worksheet->setColumn($j,$j++,strlen('quantity')+1);
 		$worksheet->setColumn($j,$j++,strlen('priority')+1);
 		$worksheet->setColumn($j,$j++,max(strlen('price'),10)+1,$priceFormat);
@@ -2217,7 +2159,7 @@ class ModelToolExport extends Model {
 		$i = 0;
 		$j = 0;
 		$worksheet->writeString( $i, $j++, 'product_id', $boxFormat );
-		$worksheet->writeString( $i, $j++, 'customer_group', $boxFormat );
+		$worksheet->writeString( $i, $j++, 'customer_group_id', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'quantity', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'priority', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'price', $boxFormat );
@@ -2228,14 +2170,13 @@ class ModelToolExport extends Model {
 		// The actual product discounts data
 		$i += 1;
 		$j = 0;
-		$query  = "SELECT pd.*, cg.name FROM `".DB_PREFIX."product_discount` pd ";
-		$query .= "LEFT JOIN `".DB_PREFIX."customer_group` cg ON cg.customer_group_id=pd.customer_group_id ";
-		$query .= "ORDER BY pd.product_id, cg.name";
+		$query  = "SELECT pd.* FROM `".DB_PREFIX."product_discount` pd ";
+		$query .= "ORDER BY pd.product_id, pd.customer_group_id";
 		$result = $database->query( $query );
 		foreach ($result->rows as $row) {
 			$worksheet->setRow( $i, 13 );
 			$worksheet->write( $i, $j++, $row['product_id'] );
-			$worksheet->write( $i, $j++, $row['name'] );
+			$worksheet->write( $i, $j++, $row['customer_group_id'] );
 			$worksheet->write( $i, $j++, $row['quantity'] );
 			$worksheet->write( $i, $j++, $row['priority'] );
 			$worksheet->write( $i, $j++, $row['price'], $priceFormat );
@@ -2252,28 +2193,27 @@ class ModelToolExport extends Model {
 		// Set the column widths
 		$j = 0;
 		$worksheet->setColumn($j,$j++,strlen('product_id')+1);
-		$worksheet->setColumn($j,$j++,strlen('customer_group')+1);
+		$worksheet->setColumn($j,$j++,strlen('customer_group_id')+1);
 		$worksheet->setColumn($j,$j++,strlen('points')+1);
 		
 		// The heading row
 		$i = 0;
 		$j = 0;
 		$worksheet->writeString( $i, $j++, 'product_id', $boxFormat );
-		$worksheet->writeString( $i, $j++, 'customer_group', $boxFormat );
+		$worksheet->writeString( $i, $j++, 'customer_group_id', $boxFormat );
 		$worksheet->writeString( $i, $j++, 'points', $boxFormat );
 		$worksheet->setRow( $i, 30, $boxFormat );
 		
 		// The actual product discounts data
 		$i += 1;
 		$j = 0;
-		$query  = "SELECT pr.*, cg.name FROM `".DB_PREFIX."product_reward` pr ";
-		$query .= "LEFT JOIN `".DB_PREFIX."customer_group` cg ON cg.customer_group_id=pr.customer_group_id ";
-		$query .= "ORDER BY pr.product_id, cg.name";
+		$query  = "SELECT pr.* FROM `".DB_PREFIX."product_reward` pr ";
+		$query .= "ORDER BY pr.product_id, pr.customer_group_id";
 		$result = $database->query( $query );
 		foreach ($result->rows as $row) {
 			$worksheet->setRow( $i, 13 );
 			$worksheet->write( $i, $j++, $row['product_id'] );
-			$worksheet->write( $i, $j++, $row['name'] );
+			$worksheet->write( $i, $j++, $row['customer_group_id'] );
 			$worksheet->write( $i, $j++, $row['points'] );
 			$i += 1;
 			$j = 0;
