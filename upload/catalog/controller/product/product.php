@@ -64,7 +64,7 @@ class ControllerProductProduct extends Controller {
 										
 				$this->data['breadcrumbs'][] = array(
 					'text'      => $category_info['name'],
-					'href'      => $this->url->link('product/category', 'path=' . $this->request->get['path']),
+					'href'      => $this->url->link('product/category', 'path=' . $this->request->get['path'].$url),
 					'separator' => $this->language->get('text_separator')
 				);
 			}
@@ -451,7 +451,7 @@ class ControllerProductProduct extends Controller {
 					);
 				}
 			}
-			
+
             $this->data['text_payment_profile'] = $this->language->get('text_payment_profile');
             $this->data['profiles'] = $this->model_catalog_product->getProfiles($product_info['product_id']);
 			
@@ -539,6 +539,8 @@ class ControllerProductProduct extends Controller {
       		$this->data['button_continue'] = $this->language->get('button_continue');
 
       		$this->data['continue'] = $this->url->link('common/home');
+
+			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . '/1.1 404 Not Found');
 
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/error/not_found.tpl')) {
 				$this->template = $this->config->get('config_template') . '/template/error/not_found.tpl';
@@ -749,6 +751,13 @@ class ControllerProductProduct extends Controller {
 				$json['error'] = $this->language->get('error_filetype');
 			}
 						
+			// Check to see if any PHP files are trying to be uploaded
+			$content = file_get_contents($this->request->files['file']['tmp_name']);
+
+			if (preg_match('/\<\?php/i', $content)) {
+				$json['error'] = $this->language->get('error_filetype');
+			}
+
 			if ($this->request->files['file']['error'] != UPLOAD_ERR_OK) {
 				$json['error'] = $this->language->get('error_upload_' . $this->request->files['file']['error']);
 			}
