@@ -56,11 +56,10 @@ Please donate via PayPal to donate@opencart.com
 //-->
 </div>
 <div align = center>
-<a href="http://yandex.ru/cy?base=0&amp;host=proditaly.com.ua"><img src="http://www.yandex.ru/cycounter?proditaly.com.ua" width="88" height="31" alt="������ �����������" border="0" /></a>
 <!-- Yandex.Metrika informer -->
-<a href="http://metrika.yandex.ru/stat/?id=22200796&amp;from=informer" style="width:88px; height:31px; border:0;
-target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/22200796/3_0_9AE4EFFF_7AC4CFFF_0_pageviews"
-" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
+<a href="https://metrika.yandex.ua/stat/?id=23913487&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/23913487/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: дані за сьогодні  (перегляди, візити та унікальні відвідувачі)" onclick="try{Ya.Metrika.informer({i:this,id:23913487,lang:'ua'});return false}catch(e){}"/></a>
 <!-- /Yandex.Metrika informer -->
 
 <!-- Yandex.Metrika counter -->
@@ -68,11 +67,12 @@ target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/22200796/3_0_9A
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
         try {
-            w.yaCounter22200796 = new Ya.Metrika({id:22200796,
+            w.yaCounter23913487 = new Ya.Metrika({id:23913487,
                     webvisor:true,
                     clickmap:true,
                     trackLinks:true,
-                    accurateTrackBounce:true});
+                    accurateTrackBounce:true,
+                    trackHash:true});
         } catch(e) { }
     });
 
@@ -88,7 +88,7 @@ target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/22200796/3_0_9A
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="//mc.yandex.ru/watch/22200796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="//mc.yandex.ru/watch/23913487" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </div>
 </body></html>
