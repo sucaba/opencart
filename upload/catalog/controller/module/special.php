@@ -2,8 +2,8 @@
 class ControllerModuleSpecial extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/special');
-
-		$this->data['heading_title'] = $this->language->get('heading_title');
+ 
+      	$this->data['heading_title'] = $this->language->get('heading_title');
 
 		$this->data['button_cart'] = $this->language->get('button_cart');
 		
@@ -21,6 +21,7 @@ class ControllerModuleSpecial extends Controller {
 		);
 
 		$results = $this->model_catalog_product->getProductSpecials($data);
+		$this->data['position'] = $setting['position'];
 
 		foreach ($results as $result) {
 			if ($result['image']) {

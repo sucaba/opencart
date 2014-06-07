@@ -3,7 +3,7 @@ class ControllerModuleLatest extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/latest');
 		
-		$this->data['heading_title'] = $this->language->get('heading_title');
+      	$this->data['heading_title'] = $this->language->get('heading_title');
 		
 		$this->data['button_cart'] = $this->language->get('button_cart');
 				
@@ -21,6 +21,7 @@ class ControllerModuleLatest extends Controller {
 		);
 
 		$results = $this->model_catalog_product->getProducts($data);
+		$this->data['position'] = $setting['position'];
 
 		foreach ($results as $result) {
 			if ($result['image']) {
@@ -55,7 +56,7 @@ class ControllerModuleLatest extends Controller {
 				'special' 	 => $special,
 				'rating'     => $rating,
 				'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 			);
 		}
 

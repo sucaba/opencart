@@ -3,7 +3,7 @@ class ControllerModuleFeatured extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/featured'); 
 
-		$this->data['heading_title'] = $this->language->get('heading_title');
+      	$this->data['heading_title'] = $this->language->get('heading_title');
 		
 		$this->data['button_cart'] = $this->language->get('button_cart');
 		
@@ -13,7 +13,8 @@ class ControllerModuleFeatured extends Controller {
 
 		$this->data['products'] = array();
 
-		$products = explode(',', $this->config->get('featured_product'));		
+		$products = explode(',', $this->config->get('featured_product'));
+		$this->data['position'] = $setting['position'];
 
 		if (empty($setting['limit'])) {
 			$setting['limit'] = 5;

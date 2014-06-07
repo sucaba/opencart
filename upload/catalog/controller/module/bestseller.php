@@ -2,8 +2,8 @@
 class ControllerModuleBestSeller extends Controller {
 	protected function index($setting) {
 		$this->language->load('module/bestseller');
-
-		$this->data['heading_title'] = $this->language->get('heading_title');
+ 
+      	$this->data['heading_title'] = $this->language->get('heading_title');
 				
 		$this->data['button_cart'] = $this->language->get('button_cart');
 		
@@ -14,6 +14,7 @@ class ControllerModuleBestSeller extends Controller {
 		$this->data['products'] = array();
 
 		$results = $this->model_catalog_product->getBestSellerProducts($setting['limit']);
+		$this->data['position'] = $setting['position'];
 		
 		foreach ($results as $result) {
 			if ($result['image']) {
@@ -48,7 +49,7 @@ class ControllerModuleBestSeller extends Controller {
 				'special' 	 => $special,
 				'rating'     => $rating,
 				'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+				'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 			);
 		}
 
