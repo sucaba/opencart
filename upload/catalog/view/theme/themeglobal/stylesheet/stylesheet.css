@@ -111,7 +111,7 @@ background: #ffffff;
 }
 /* header */
 #header {
-	height: 100px;
+	height: 130px;
 	margin-bottom: 7px;
 	padding-bottom: 4px;
 	position: relative;
@@ -948,7 +948,7 @@ ul.box-filter > li ul {
 }
 .category-list ul {
 	float: left;
-	width: 18%;
+	width: 60%;
 	list-style: none outside none;
 }
 /* ThemeGlobal.com - OpenCart Templates Club. Unlimited access to all of our themes for only $49. */

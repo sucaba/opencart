@@ -20,7 +20,7 @@
   <?php if ($categories) { ?>
   <h2><?php echo $text_refine; ?></h2>
   <div class="category-list">
-    <?php if (count($categories) <= 5) { ?>
+    <?php if (count($categories) <= 10) { ?>
     <ul>
       <?php foreach ($categories as $category) { ?>
       <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
@@ -29,7 +29,7 @@
     <?php } else { ?>
     <?php for ($i = 0; $i < count($categories);) { ?>
     <ul>
-      <?php $j = $i + ceil(count($categories) / 4); ?>
+      <?php $j = $i + ceil(count($categories) / 9); ?>
       <?php for (; $i < $j; $i++) { ?>
       <?php if (isset($categories[$i])) { ?>
       <li><a href="<?php echo $categories[$i]['href']; ?>"><?php echo $categories[$i]['name']; ?></a></li>
