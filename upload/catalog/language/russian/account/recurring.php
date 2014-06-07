@@ -1,0 +1,52 @@
+<?php
+/***********************************************************************************************************************
+***********************************************************************************************************************/
+
+$_['heading_title'] = 'Регулярные платежи';
+$_['button_continue'] = 'Продолжить';
+$_['button_view'] = 'Вид';
+$_['button_cancel_profile'] = 'Отменить платеж';
+$_['text_empty'] = 'Регулярный платеж в профиле не найдено';
+$_['text_product'] = 'Продукт:';
+$_['text_order'] = 'Заказ:';
+$_['text_account'] = 'Моя информация';
+$_['text_action'] = 'Действие';
+$_['text_recurring'] = 'Регулярный платеж';
+$_['text_transactions'] = 'Транзакция';
+$_['button_return'] = 'Возврат';
+$_['text_confirm_cancel'] = 'Вы уверены, что хотите отменить этот профиль?';
+$_['text_empty_transactions'] = 'Нет транзакций для этого пользователя';
+$_['column_created'] = 'Создано';
+$_['column_type'] = 'Тип';
+$_['column_amount'] = 'Количество';
+$_['column_status'] = 'Статус';
+$_['column_product'] = 'Товар';
+$_['column_product'] = 'Продукт';
+$_['column_action'] = 'Действие';
+$_['column_profile_id'] = 'Идентификатор пользователя';
+$_['text_recurring_detail'] = 'Детали регулярного платежа'; #48432
+$_['text_recurring_id'] = 'Идентификатор пользователя:'; #48604
+$_['text_payment_method'] = 'Способ платежа:'; #48420
+$_['text_date_added'] = 'Создано:'; #48421
+$_['text_recurring_description'] = 'Описание:'; #48422
+$_['text_status'] = 'Статус:'; #48423
+$_['text_ref'] = 'Ссылка'; #48605
+$_['text_status_active'] = 'Активно'; #51812
+$_['text_status_inactive'] = 'Деактивировано'; #51814
+$_['text_status_cancelled'] = 'Скасовано'; #51818
+$_['text_status_suspended'] = 'Приостановленно'; #52090
+$_['text_status_expired'] = 'Просрочено'; #48575
+$_['text_status_pending'] = 'В ожидании'; #52073
+$_['text_transaction_created'] = 'Создано'; #48426
+$_['text_transaction_payment'] = 'Оплата'; #51887
+$_['text_transaction_outstanding_payment'] = 'Невыплаченая оплата'; #52099
+$_['text_transaction_skipped'] = 'Пропущенные выплаты'; #52093
+$_['text_transaction_failed'] = 'Неудачные выплаты'; #52095
+$_['text_transaction_cancelled'] = 'Скасовано'; #48428
+$_['text_transaction_suspended'] = 'Приостановленно'; #52091
+$_['text_transaction_suspended_failed'] = 'В ожидании через неудачную выплату'; #52101
+$_['text_transaction_outstanding_failed'] = 'Платеж не проведено'; #52103
+$_['text_transaction_expired'] = 'Просрочено'; #51823
+$_['error_not_cancelled'] = 'Ошибка: %s'; #51922
+$_['error_not_found'] = 'Невозможно отменить профиль'; #52087
+$_['success_cancelled'] = 'Регулярный платеж отменен'; #48431
