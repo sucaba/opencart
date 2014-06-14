@@ -1,31 +1,23 @@
 <?php
-// Heading
-$_['heading_title']      = 'PayPal Website Payment Pro (UK)';
-
-// Text 
-$_['text_payment']       = 'Payment';
-$_['text_success']       = 'Success: You have modified PayPal Direct (UK) account details!';
-$_['text_pp_pro_uk']     = '<a onclick="window.open(\'https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW\');"><img src="view/image/payment/paypal.png" alt="PayPal Website Payment Pro (UK)" title="PayPal Website Payment Pro (UK)" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_authorization'] = 'Authorization';
-$_['text_sale']          = 'Sale';
-
-// Entry
-$_['entry_vendor']       = 'Vendor:<br /><span class="help">Your merchant login ID that you created when you registered for the Website Payments Pro account.</span>';
-$_['entry_user']         = 'User:<br /><span class="help">If you set up one or more additional users on the account, this value is the ID of the user authorised to process transactions. If, however, you have not set up additional users on the account, USER has the same value as VENDOR.</span>';
-$_['entry_password']     = 'Password:<br /><span class="help">The 6 to 32 character password that you defined while registering for the account.</span>';
-$_['entry_partner']      = 'Partner:<br /><span class="help">The ID provided to you by the authorised PayPal Reseller who registered you for the Payflow SDK. If you purchased your account directly from PayPal, use PayPalUK.</span>';
-$_['entry_test']         = 'Test Mode:<br /><span class="help">Use the live or testing (sandbox) gateway server to process transactions?</span>';
-$_['entry_transaction']  = 'Transaction Method:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment PayPal Website Payment Pro (UK)!';
-$_['error_vendor']       = 'Vendor Required!'; 
-$_['error_user']         = 'User Required!'; 
-$_['error_password']     = 'Password Required!'; 
-$_['error_partner']      = 'Partner Required!'; 
-?>
+$_['heading_title'] = 'PayPal Website Payment Pro (UK)'; #40721
+$_['text_payment'] = 'Оплата'; #40722
+$_['text_success'] = 'Налаштування PayPal Website Payment Pro (UK) змінено!'; #41351
+$_['text_pp_pro_uk'] = '<a onclick="window.open(\'https://www.paypal.com/uk/mrb/pal=W9TBB5DTD6QJW\');"><img src="view/image/payment/paypal.png" alt="PayPal Website Payment Pro (UK)" title="PayPal Website Payment Pro (UK)" style="border: 1px solid #EEEEEE;" /></a>'; #41026
+$_['text_authorization'] = 'Авторизація'; #40723
+$_['text_sale'] = 'Продаж'; #40724
+$_['entry_vendor'] = 'Продавець:<br /><span class="help">Ваш код продавця в системі Website Payments Pro</span>'; #41027
+$_['entry_user'] = 'Користувач:<br /><span class="help">Якщо ви встановите один або кілька додаткових користувачів на рахунку, це значення коду користувача, уповноваженого для обробки транзакцій. Однак, якщо ви ще не створили додаткових користувачів на рахунки, користувач має те ж значення, як і постачальник</span>'; #41352
+$_['entry_password'] = 'Пароль:<br /><span class="help">Пароль до облікового запису PayPal Website Payment Pro (UK), повинен містити від 6 до 32 символів</span>'; #41353
+$_['entry_partner'] = 'Партнер: <br /><span class="help">Код партнера в системі PayPal Website Payment Pro (UK), який зареєстрував вас на Payflow SDK. Якщо ви отримали обліковий запис безпосередньо в системі PayPal, використовуйте PayPalUK. </ SPAN>'; #41354
+$_['entry_test'] = 'Режим тестування:<br /><span class="help">Використовуйте цей режим для віртуального здійснення оплати</span>'; #41028
+$_['entry_transaction'] = 'Метод транзакції:'; #40725
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42765
+$_['entry_order_status'] = 'Статус замовлення:'; #40726
+$_['entry_geo_zone'] = 'Гео-зона:'; #41355
+$_['entry_status'] = 'Статус:'; #40727
+$_['entry_sort_order'] = 'Порядок сортування:'; #41356
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань PayPal Website Payment Pro (UK)!'; #41357
+$_['error_vendor'] = 'Необхідно вказати постачальника!'; #41358
+$_['error_user'] = 'Необхідно вказати користувача!'; #41359
+$_['error_password'] = 'Необхідно вказати пароль!'; #41360
+$_['error_partner'] = 'Необхідно вказати партнерський код!'; #41361

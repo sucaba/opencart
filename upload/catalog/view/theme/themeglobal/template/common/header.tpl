@@ -117,6 +117,3 @@ DD_belatedPNG.fix('#logo img');
 </div>
 <?php } ?>
 <div id="notification"></div>
-<!-- **************ThemeGlobal.com - OpenCart Templates Club. Unlimited access to all of our themes for only $49.************** -->
-<!-- **************ThemeGlobal.com - OpenCart Templates Club. Unlimited access to all of our themes for only $49.************** -->
-<!-- **************ThemeGlobal.com - OpenCart Templates Club. Unlimited access to all of our themes for only $49.************** -->

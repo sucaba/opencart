@@ -1,15 +1,7 @@
 <?php
-// Heading
-$_['heading_title']     = 'Модули';
-
-// Text
-$_['text_install']      = 'Установить';
-$_['text_uninstall']    = 'Удалить';
-
-// Column
-$_['column_name']       = 'Название модуля';
-$_['column_action']     = 'Действие';
-
-// Error
-$_['error_permission']  = 'У Вас нет прав для управления модулями!';
-?>
+$_['heading_title'] = 'Модулі'; #39850
+$_['text_install'] = 'Встановити'; #39851
+$_['text_uninstall'] = 'Видалити'; #39852
+$_['column_name'] = 'Назва модуля'; #39853
+$_['column_action'] = 'Дія'; #39854
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань модуля!'; #40416

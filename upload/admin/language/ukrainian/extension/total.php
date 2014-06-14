@@ -1,17 +1,9 @@
 <?php
-// Heading
-$_['heading_title']     = 'Учитывать в заказе';
-
-// Text
-$_['text_install']      = 'Установить';
-$_['text_uninstall']    = 'Удалить';
-
-// Column
-$_['column_name']       = 'Учитывать в заказе';
-$_['column_status']     = 'Статус';
-$_['column_sort_order'] = 'Порядок сортировки';
-$_['column_action']     = 'Действие';
-
-// Error
-$_['error_permission']  = 'У Вас нет прав для управления этим модулем!';
-?>
+$_['heading_title'] = 'Враховувати в замовленні'; #40762
+$_['text_install'] = 'Інсталяція'; #40520
+$_['text_uninstall'] = 'Деінсталяція'; #40521
+$_['column_name'] = 'Всього в замовленні'; #40763
+$_['column_status'] = 'Статус'; #40522
+$_['column_sort_order'] = 'Порядок сортування'; #40523
+$_['column_action'] = 'Дія'; #40524
+$_['error_permission'] = 'Ви не маєте повноважень для виконання цієї дії!'; #40764

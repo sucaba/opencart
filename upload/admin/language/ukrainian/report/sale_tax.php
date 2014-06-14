@@ -1,24 +1,16 @@
 <?php
-// Heading
-$_['heading_title']     = 'Отчет по налогам';
-
-// Text
-$_['text_year']         = 'Годы';
-$_['text_month']        = 'Месяцы';
-$_['text_week']         = 'Недели';
-$_['text_day']          = 'Дни';
-$_['text_all_status']   = 'Все статусы';
-
-// Column
-$_['column_date_start'] = 'Дата начала';
-$_['column_date_end']   = 'Дата окончания';
-$_['column_title']      = 'Название налога';
-$_['column_orders']     = 'Кол-во заказов';
-$_['column_total']      = 'Итого';
-
-// Entry
-$_['entry_date_start']  = 'Дата начала:';
-$_['entry_date_end']    = 'Дата окончания:';
-$_['entry_group']       = 'Сортировать по:';
-$_['entry_status']      = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Повідомлення про комісію'; #42931
+$_['text_year'] = 'Роки'; #42932
+$_['text_month'] = 'Місяці'; #42933
+$_['text_week'] = 'Неділі'; #42934
+$_['text_day'] = 'Дні'; #42935
+$_['text_all_status'] = 'Усі статуси'; #42936
+$_['column_date_start'] = 'Дата початку'; #42937
+$_['column_date_end'] = 'Дата завершення'; #42938
+$_['column_title'] = 'Назва комісії'; #42939
+$_['column_orders'] = 'Номери замовлень'; #42940
+$_['column_total'] = 'Всього'; #42941
+$_['entry_date_start'] = 'Дата початку:'; #42942
+$_['entry_date_end'] = 'Дата завершення:'; #42943
+$_['entry_group'] = 'Сортувати:'; #42944
+$_['entry_status'] = 'Статус замовлення:'; #42945

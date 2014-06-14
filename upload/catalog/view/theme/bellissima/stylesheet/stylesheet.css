@@ -103,9 +103,9 @@ label {
 }
 #language {
 	position: absolute;
-	top: 15px;
-	left: 320px;
-	width: 80px;
+	top: 62px;
+	left: 475px;
+	width: 800px;
 	color: #999;
 	line-height: 17px;
 }
@@ -289,10 +289,10 @@ label {
 }
 #header #welcome {
 	position: absolute;
-	top: 47px;
+	top: 57px;
 	right: 0px;
 	z-index: 5;
-	width: 298px;
+	width: 498px;
 	text-align: right;
 	color: #999999;
 }

@@ -1,25 +1,17 @@
 <?php
-// Heading
-$_['heading_title']      = 'PSIGate';
-
-// Text 
-$_['text_payment']       = 'Payment'; 
-$_['text_success']       = 'Success: You have modified PSIGate account details!';
-
-// Entry
-$_['entry_merchant']     = 'Merchant ID:';
-$_['entry_password']     = 'Passphrase:';
-$_['entry_gateway']      = 'Gateway URL:';
-$_['entry_test']         = 'Test Mode:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment PSIGate!';
-$_['error_merchant']     = 'Merchant Required!';
-$_['error_password']     = 'Passphrase Required!';
-$_['error_gateway']      = 'Gateway URL Required!';
-?>
+$_['heading_title'] = 'PSIGate'; #40734
+$_['text_payment'] = 'Оплата'; #40735
+$_['text_success'] = 'Налаштування PSIGate змінено!'; #41033
+$_['entry_merchant'] = 'Код продавця:'; #41367
+$_['entry_password'] = 'Ключове слово:'; #41368
+$_['entry_gateway'] = 'Веб-адреса запиту:'; #41034
+$_['entry_test'] = 'Тестовий режим:'; #40736
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42766
+$_['entry_order_status'] = 'Статус замовлення:'; #40737
+$_['entry_geo_zone'] = 'Гео-зона:'; #41369
+$_['entry_status'] = 'Статус:'; #40738
+$_['entry_sort_order'] = 'Порядок сортування:'; #41035
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань PSIGate!'; #41370
+$_['error_merchant'] = 'Необхідно вказати код продавця!'; #41036
+$_['error_password'] = 'Необхідно вказати ключове слово!'; #41371
+$_['error_gateway'] = 'Необхідно вказати веб-адресу запиту!'; #41372

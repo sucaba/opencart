@@ -1,20 +1,12 @@
 <?php
-// Heading
-$_['heading_title']		= 'Отчет по купленным товарам';
-
-// Text
-$_['text_all_status']   = 'Все статусы';
-
-// Column
-$_['column_date_start'] = 'Дата начала';
-$_['column_date_end']   = 'Дата окончания';
-$_['column_name']       = 'Название товара';
-$_['column_model']      = 'Модель';
-$_['column_quantity']   = 'Количество';
-$_['column_total']      = 'Итого';
-
-// Entry
-$_['entry_date_start']  = 'Дата начала:';
-$_['entry_date_end']    = 'Дата окончания:';
-$_['entry_status']      = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Повідомлення про повернені товари'; #42883
+$_['text_all_status'] = 'Усі статуси'; #42874
+$_['column_date_start'] = 'Дата початку'; #42875
+$_['column_date_end'] = 'Дата завершення'; #42876
+$_['column_name'] = 'Назва товару'; #42877
+$_['column_model'] = 'Модель'; #42878
+$_['column_quantity'] = 'Кількість'; #42857
+$_['column_total'] = 'Всього'; #42879
+$_['entry_date_start'] = 'Дата початку:'; #42880
+$_['entry_date_end'] = 'Дата завершення:'; #42881
+$_['entry_status'] = 'Статус замовлення:'; #42882

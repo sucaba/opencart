@@ -1,29 +1,21 @@
 <?php
-// Heading
-$_['heading_title']             = 'Web Payment Software';
-
-// Text
-$_['text_payment']              = 'Payment';
-$_['text_success']              = 'Success: You have modified Web Payment Software account details!';
-$_['text_web_payment_software'] = '<a onclick="window.open(\'http://www.web-payment-software.com/\');"><img src="view/image/payment/wps-logo.jpg" alt="Web Payment Software" title="Web Payment Software" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_test']                 = 'Test';
-$_['text_live']                 = 'Live';
-$_['text_authorization']        = 'Authorization';
-$_['text_capture']              = 'Capture';
-
-// Entry
-$_['entry_login']               = 'Merchant ID:';
-$_['entry_key']                 = 'Merchant Key:';
-$_['entry_mode']                = 'Transaction Mode:';
-$_['entry_method']              = 'Transaction Method:';
-$_['entry_total']               = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status']        = 'Order Status:';
-$_['entry_geo_zone']            = 'Geo Zone:';
-$_['entry_status']              = 'Status:';
-$_['entry_sort_order']          = 'Sort Order:';
-
-// Error
-$_['error_permission']          = 'Warning: You do not have permission to modify payment Web Payment Software!';
-$_['error_login']               = 'Login ID Required!';
-$_['error_key']                 = 'Transaction Key Required!';
-?>
+$_['heading_title'] = 'Web Payment Software'; #42994
+$_['text_payment'] = 'Оплата'; #42995
+$_['text_success'] = 'Деталі акаунту Web Payment Software успішно змінено! '; #43046
+$_['text_web_payment_software'] = '<a onclick="window.open(\'http://www.web-payment-software.com/\');"><img src="view/image/payment/wps-logo.jpg" alt="Web Payment Software" title="Web Payment Software" style="border: 1px solid #EEEEEE;" /></a>'; #43047
+$_['text_test'] = 'Тест'; #42996
+$_['text_live'] = 'Наживо'; #43048
+$_['text_authorization'] = 'Авторизація'; #42997
+$_['text_capture'] = 'Захоплення'; #43113
+$_['entry_login'] = 'Торговий ID:'; #43049
+$_['entry_key'] = 'Торговий ключ:'; #43050
+$_['entry_mode'] = 'Режим транзакції:'; #42998
+$_['entry_method'] = 'Метод транзакції:'; #42999
+$_['entry_total'] = 'Загалом:<br /><span class="help"> Перевірте замовлення до активації оплати.</span>'; #43052
+$_['entry_order_status'] = 'Статус замовлення:'; #43000
+$_['entry_geo_zone'] = 'Гео-зона:'; #43001
+$_['entry_status'] = 'Статус:'; #43002
+$_['entry_sort_order'] = 'Впорядкувати замовлення:'; #43003
+$_['error_permission'] = 'Ви не маєте повноважень для зміни оплати Web Payment Software!'; #43045
+$_['error_login'] = 'Необхідний код логіну!'; #43070
+$_['error_key'] = 'Необхідний ключ транзакції!'; #43004

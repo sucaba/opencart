@@ -1,23 +1,14 @@
 <?php
-// Heading
-$_['heading_title']     = 'Отчет по возвратам';
-
-// Text
-$_['text_year']         = 'Годы';
-$_['text_month']        = 'Месяцы';
-$_['text_week']         = 'Недели';
-$_['text_day']          = 'Дни';
-$_['text_all_status']   = 'Все статусы';
-
-// Column
-$_['column_date_start'] = 'Дата начала';
-$_['column_date_end']   = 'Дата окончания';
-$_['column_returns']    = 'Кол-во возвратов';
-$_['column_products']   = 'Кол-во товаров';
-
-// Entry
-$_['entry_date_start']  = 'Дата начала:';
-$_['entry_date_end']    = 'Дата окончания:';
-$_['entry_group']       = 'Сортировать по:';
-$_['entry_status']      = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Повідомлення про повернення'; #42903
+$_['text_year'] = 'Роки'; #42904
+$_['text_month'] = 'Місяці'; #42905
+$_['text_week'] = 'Неділі'; #42906
+$_['text_day'] = 'Дні'; #42907
+$_['text_all_status'] = 'Усі статуси'; #42908
+$_['column_date_start'] = 'Дата початку'; #42909
+$_['column_date_end'] = 'Дата завершення'; #42910
+$_['column_returns'] = 'Номери повернень'; #42911
+$_['entry_date_start'] = 'Дата початку'; #42912
+$_['entry_date_end'] = 'Дата завершення:'; #42913
+$_['entry_group'] = 'Сортувати:'; #42914
+$_['entry_status'] = 'Статус повернення:'; #42915

@@ -1,15 +1,9 @@
 <?php
-// Heading
-$_['heading_title']    = 'Отчет по купонам';
-
-// Column
-$_['column_name']      = 'Имя купона';
-$_['column_code']      = 'Код';
-$_['column_orders']    = 'Заказы';
-$_['column_total']     = 'Итого';
-$_['column_action']    = 'Действие';
-
-// Entry
-$_['entry_date_start'] = 'Дата начала:';
-$_['entry_date_end']   = 'Дата окончания:';
-?>
+$_['heading_title'] = 'Повідомлення про купони'; #42884
+$_['column_name'] = 'Назва купону'; #42885
+$_['column_code'] = 'Код'; #42855
+$_['column_orders'] = 'Замовлення'; #42886
+$_['column_total'] = 'Всього'; #42866
+$_['column_action'] = 'Дія'; #42856
+$_['entry_date_start'] = 'Дата початку:'; #42867
+$_['entry_date_end'] = 'Дата завершення:'; #42868

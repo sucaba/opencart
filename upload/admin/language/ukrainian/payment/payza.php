@@ -1,23 +1,15 @@
 <?php
-// Heading
-$_['heading_title']      = 'Payza';
-
-// Text 
-$_['text_payment']       = 'Оплата';
-$_['text_success']       = 'Настройки модуля обновлены!';
-      
-// Entry
-$_['entry_merchant']     = 'Merchant ID:';
-$_['entry_security']     = 'Security Code:';
-$_['entry_callback']     = 'Alert URL:<br /><span class="help">Это должно быть установлено в панели управления Payza. Вам также понадобится проверить, чтобы "IPN Status" было включено.</span>';
-$_['entry_total']        = 'Минимальная сумма заказа:<br /><span class="help">Сумма заказа, после достижения которой данный способ станет доступен.</span>';
-$_['entry_order_status'] = 'Статус заказа:';
-$_['entry_geo_zone']	 = 'Географическая зона:';
-$_['entry_status']       = 'Статус:';
-$_['entry_sort_order']	 = 'Порядок сортировки:';
-
-// Error
-$_['error_permission']   = 'У Вас нет прав для управления этим модулем!';
-$_['error_merchant_id']  = 'Отсутствует Merchant ID!';
-$_['error_security']     = 'Отсутствует Security Code!';
-?>
+$_['heading_title'] = 'Payza'; #43443
+$_['text_payment'] = 'Оплата'; #43444
+$_['text_success'] = 'Налаштування рахунку Payza змінено!'; #43445
+$_['entry_merchant'] = 'Код продавця:'; #43446
+$_['entry_security'] = 'Код безпеки:'; #43447
+$_['entry_callback'] = 'Повідомлення URL:<br /><span class="help">Ця функція має бути встановлена в панелі управління Payza. Вам також необхідно включити "IPN Статус". </span>'; #43448
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #43449
+$_['entry_order_status'] = 'Статус замовлення:'; #43450
+$_['entry_geo_zone'] = 'Гео-зона:'; #43451
+$_['entry_status'] = 'Статус:'; #43452
+$_['entry_sort_order'] = 'Порядок сортування:'; #43453
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань Payza!'; #43454
+$_['error_merchant'] = 'Необхідно вказати код продавця!'; #43455
+$_['error_security'] = 'Необхідно вказати код безпеки!'; #43456

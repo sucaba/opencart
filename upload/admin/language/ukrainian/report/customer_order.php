@@ -1,22 +1,14 @@
 <?php
-// Heading
-$_['heading_title']         = 'Отчет по заказам клиентов';
-
-// Text
-$_['text_all_status']       = 'Все статусы';
-
-// Column
-$_['column_customer']       = 'Имя клиента';
-$_['column_email']          = 'E-Mail';
-$_['column_customer_group'] = 'Группа клиента';
-$_['column_status']         = 'Статус';
-$_['column_orders']         = 'Кол-во заказов';
-$_['column_products']       = 'Кол-во товаров';
-$_['column_total']          = 'Итого';
-$_['column_action']         = 'Действие';
-
-// Entry
-$_['entry_date_start']      = 'Дата начала:';
-$_['entry_date_end']        = 'Дата окончания:';
-$_['entry_status']          = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Звіт про замовлення клієнтів'; #42851
+$_['text_all_status'] = 'Всі статуси'; #42852
+$_['column_customer'] = 'ім’я клієнта'; #42858
+$_['column_email'] = 'E-mail'; #42836
+$_['column_customer_group'] = 'Група покупців'; #42837
+$_['column_status'] = 'Статус'; #42838
+$_['column_orders'] = 'Номер замовлення'; #42853
+$_['column_products'] = 'Номер товарів'; #42859
+$_['column_total'] = 'Всього'; #42839
+$_['column_action'] = 'Дія'; #42840
+$_['entry_date_start'] = 'Дата початку:'; #42841
+$_['entry_date_end'] = 'Дата завершення:'; #42842
+$_['entry_status'] = 'Статус замовлення:'; #42860

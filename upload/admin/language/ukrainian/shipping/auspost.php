@@ -1,23 +1,15 @@
 <?php
-// Heading
-$_['heading_title']    = 'Australia Post';
-
-// Text
-$_['text_shipping']    = 'Shipping';
-$_['text_success']     = 'Success: You have modified Australia Post shipping!';
-
-// Entry
-$_['entry_express']    = 'Express Postage:';
-$_['entry_standard']   = 'Standard Postage:';
-$_['entry_postcode']   = 'Post Code:';
-$_['entry_handling']   = 'Handling Charge:';
-$_['entry_estimate']   = 'Display Delivery Estimate:';
-$_['entry_tax']        = 'Tax Class:';
-$_['entry_geo_zone']   = 'Geo Zone:';
-$_['entry_status']     = 'Status:';
-$_['entry_sort_order'] = 'Sort Order:';
-
-// Error
-$_['error_permission'] = 'Warning: You do not have permission to modify Australia Post shipping!';
-$_['error_postcode']   = 'Post Code must be 4 digits!';
-?>
+$_['heading_title'] = 'Пошта австралії'; #43471
+$_['text_shipping'] = 'Доставка'; #43468
+$_['text_success'] = 'Успішно: Ви змінили налаштування доставки Австралійської пошти'; #43478
+$_['entry_postcode'] = 'Поштовий індекс:'; #43472
+$_['entry_express'] = 'Експрес посилка:'; #43479
+$_['entry_standard'] = 'Стандартна посилка:'; #43480
+$_['entry_display_time'] = 'Відображення часу доставки:<br /><span class="help">Ви хочете, щоб відображало час доставки? (Наприклад, доставляється протягом 3-5 днів)</span>'; #43481
+$_['entry_weight_class'] = 'Вага класу:<span class="help">Зазначена у грамах.</span>'; #43482
+$_['entry_tax_class'] = 'Податковий клас:'; #43473
+$_['entry_geo_zone'] = 'Гео-зона:'; #43474
+$_['entry_status'] = 'Статус:'; #43469
+$_['entry_sort_order'] = 'Порядок сортування:'; #43470
+$_['error_permission'] = 'Увага: Ви не маєте права змінювати налаштування доставки Австралійською поштою!'; #43483
+$_['error_postcode'] = 'Поштовий код повинен містити 4 цифри!'; #43458

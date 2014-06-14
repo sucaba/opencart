@@ -1,25 +1,17 @@
 <?php
-// Heading
-$_['heading_title']     = 'Отчет по продажам';
-
-// Text
-$_['text_year']         = 'Годы';
-$_['text_month']        = 'Месяцы';
-$_['text_week']         = 'Недели';
-$_['text_day']          = 'Дни';
-$_['text_all_status']   = 'Все статусы';
-
-// Column
-$_['column_date_start'] = 'Дата начала';
-$_['column_date_end']   = 'Дата окончания';
-$_['column_orders']     = 'Кол-во заказов';
-$_['column_products']   = 'Кол-во товаров';
-$_['column_tax']        = 'Налог';
-$_['column_total']      = 'Итого';
-
-// Entry
-$_['entry_date_start']  = 'Дата начала:';
-$_['entry_date_end']    = 'Дата окончания:';
-$_['entry_group']       = 'Сортировать по:';
-$_['entry_status']      = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Повідомлення про продажі'; #42887
+$_['text_year'] = 'Роки'; #42888
+$_['text_month'] = 'Місяці'; #42889
+$_['text_week'] = 'Неділі'; #42890
+$_['text_day'] = 'Дні'; #42891
+$_['text_all_status'] = 'Усі статуси'; #42892
+$_['column_date_start'] = 'Дата початку'; #42893
+$_['column_date_end'] = 'Дата завершення'; #42894
+$_['column_orders'] = 'Номери замовлень'; #42895
+$_['column_products'] = 'Номери товарів'; #42896
+$_['column_tax'] = 'Комісія'; #42897
+$_['column_total'] = 'Всього'; #42898
+$_['entry_date_start'] = 'Дата початку:'; #42899
+$_['entry_date_end'] = 'Дата завершення:'; #42900
+$_['entry_group'] = 'Сортувати:'; #42901
+$_['entry_status'] = 'Статус замовлення:'; #42902

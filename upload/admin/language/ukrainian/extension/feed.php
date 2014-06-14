@@ -1,16 +1,9 @@
 <?php
-// Heading
-$_['heading_title']  = 'Каналы продвижения';
 
-// Text
-$_['text_install']   = 'Установить';
-$_['text_uninstall'] = 'Удалить';
-
-// Column
-$_['column_name']    = 'Название канала';
-$_['column_status']  = 'Статус';
-$_['column_action']  = 'Действие';
-
-// Error
-$_['error_permission']  = 'У Вас нет прав для изменения канала товаров!';
-?>
+$_['heading_title'] = 'Канали товарів'; #39855
+$_['text_install'] = 'Інсталювати'; #39846
+$_['text_uninstall'] = 'Деінсталювати'; #39847
+$_['column_name'] = 'Назва каналу'; #39857
+$_['column_status'] = 'Статус'; #39848
+$_['column_action'] = 'Дія'; #39849
+$_['error_permission'] = 'Ви не маєте повноважень для редагування каналів!'; #39856

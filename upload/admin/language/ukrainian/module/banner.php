@@ -1,24 +1,16 @@
 <?php
-// Heading
-$_['heading_title']       = 'Баннер';
-
-// Text
-$_['text_module']         = 'Модули';
-$_['text_success']        = 'Модуль баннера успешно обновлен!';
-$_['text_content_top']    = 'Содержание шапки';
-$_['text_content_bottom'] = 'Содержание подвала';
-$_['text_column_left']    = 'Левая колонка';
-$_['text_column_right']   = 'Правая колонка';
-
-// Entry
-$_['entry_banner']        = 'Баннер:';
-$_['entry_dimension']     = 'Размеры (Ширина x Высота):';
-$_['entry_layout']        = 'Шаблон:';
-$_['entry_position']      = 'Расположение:';
-$_['entry_status']        = 'Статус:';
-$_['entry_sort_order']    = 'Порядок сортировки:';
-
-// Error
-$_['error_permission']    = 'У Вас нет прав для изменения модуля баннера!';
-$_['error_dimension']     = 'Введите размеры баннера!';
-?>
+$_['heading_title'] = 'Банер'; #42231
+$_['text_module'] = 'Модулі'; #42232
+$_['text_success'] = 'Налаштування модуля успішно змінено!'; #42302
+$_['text_content_top'] = 'Над контентом'; #42233
+$_['text_content_bottom'] = 'Під контентом'; #42234
+$_['text_column_left'] = 'Ліва колонка'; #42235
+$_['text_column_right'] = 'Права колонка'; #42236
+$_['entry_banner'] = 'Баннер:'; #42237
+$_['entry_dimension'] = 'Розміри (Ш х В):'; #42238
+$_['entry_layout'] = 'Макет:'; #42303
+$_['entry_position'] = 'Позиція:'; #42239
+$_['entry_status'] = 'Статус:'; #42240
+$_['entry_sort_order'] = 'Порядок сортування:'; #42304
+$_['error_permission'] = 'Ви не маєте повноважень для редагування модуля!'; #42305
+$_['error_dimension'] = 'Необхідно вказати розміри!'; #42645

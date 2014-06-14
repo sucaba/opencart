@@ -1,22 +1,14 @@
 <?php
-// Heading
-$_['heading_title']			= 'Приветствие';
-
-// Text
-$_['text_module']			= 'Модули';
-$_['text_success']			= 'Настройки модуля обновлены!';
-$_['text_content_top']		= 'Содержание шапки';
-$_['text_content_bottom']	= 'Содержание подвала';
-$_['text_column_left']		= 'Левая колонка';
-$_['text_column_right']		= 'Правая колонка';
-
-// Entry
-$_['entry_description']		= 'Приветственное сообщение:';
-$_['entry_layout']			= 'Схема:';
-$_['entry_position']		= 'Расположение:';
-$_['entry_status']			= 'Статус:';
-$_['entry_sort_order']		= 'Порядок сортировки:';
-
-// Error
-$_['error_permission']		= 'У Вас нет прав для управления этим модулем!';
-?>
+$_['heading_title'] = 'Ласкаво просимо'; #42259
+$_['text_module'] = 'Модулі'; #42260
+$_['text_success'] = 'Налаштування модуля успішно змінено!'; #42314
+$_['text_content_top'] = 'Над контентом'; #42261
+$_['text_content_bottom'] = 'Під контентом'; #42262
+$_['text_column_left'] = 'Ліва колонка'; #42263
+$_['text_column_right'] = 'Права колонка'; #42264
+$_['entry_description'] = 'Привітання:'; #42265
+$_['entry_layout'] = 'Макет:'; #42315
+$_['entry_position'] = 'Позиція:'; #42266
+$_['entry_status'] = 'Статус:'; #42267
+$_['entry_sort_order'] = 'Порядок сортування:'; #42316
+$_['error_permission'] = 'Ви не маєте повноважень для налаштування модуля!'; #42317

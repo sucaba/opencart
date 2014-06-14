@@ -1,17 +1,9 @@
 <?php
-// Heading
-$_['heading_title']     = 'Оплата';
-
-// Text
-$_['text_install']      = 'Установить';
-$_['text_uninstall']    = 'Удалить';
-
-// Column
-$_['column_name']       = 'Метод оплаты';
-$_['column_status']     = 'Статус';
-$_['column_sort_order'] = 'Порядок сортировки';
-$_['column_action']     = 'Действие';
-
-// Error
-$_['error_permission']  = 'У Вас нет прав для управления оплатами!';
-?>
+$_['heading_title'] = 'Оплата'; #39858
+$_['text_install'] = 'Інсталювати'; #39859
+$_['text_uninstall'] = 'Деінсталювати'; #39860
+$_['column_name'] = 'Метод оплати'; #39861
+$_['column_status'] = 'Статус'; #39862
+$_['column_sort_order'] = 'Порядок сортування'; #39863
+$_['column_action'] = 'Дія'; #39864
+$_['error_permission'] = 'Ви не маєте повноважень для редагування методів оплати!'; #40417

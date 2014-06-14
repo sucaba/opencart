@@ -1,27 +1,19 @@
 <?php
-// Heading
-$_['heading_title']      = 'WorldPay';
-
-// Text 
-$_['text_payment']       = 'Payment';
-$_['text_success']       = 'Success: You have modified WorldPay account details!';
-$_['text_successful']    = 'On - Always Successful';
-$_['text_declined']      = 'On - Always Declined';
-$_['text_off']           = 'Off';
-      
-// Entry
-$_['entry_merchant']     = 'Merchant ID:';
-$_['entry_password']     = 'Payment Response password:<br /><span class="help">This has to be set in the WordPay control panel.</span>';
-$_['entry_callback']     = 'Relay Response URL:<br /><span class="help">This has to be set in the WordPay control panel. You will also need to check the "Enable the Shopper Response".</span>';
-$_['entry_test']         = 'Test Mode:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment WorldPay!';
-$_['error_merchant']     = 'Merchant ID Required!';
-$_['error_password']     = 'Password Required!';
-?>
+$_['heading_title'] = 'WorldPay'; #40958
+$_['text_payment'] = 'Оплата'; #41047
+$_['text_success'] = 'Налаштування WorldPay змінено!'; #41048
+$_['text_successful'] = 'Увімкнено &mdash; завжди успішно'; #40959
+$_['text_declined'] = 'Увімкнено &mdash; завжди відхилено'; #40960
+$_['text_off'] = 'Вимкнено'; #40961
+$_['entry_merchant'] = 'Код транзакції:'; #40962
+$_['entry_password'] = 'Пароль для відповіді:<br /><span class="help">Цей параметр повинен бути налаштований в контрольній панелі WordPay</span>'; #41049
+$_['entry_callback'] = 'Веб-адреса для відповіді:<br /><span class="help">Цей параметр повинен бути налаштований в контрольній панелі WordPay. Також перевірте чи увімкнено параметр "Enable the Shopper Response"</span>'; #41050
+$_['entry_test'] = 'Режим тестування:'; #40963
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42771
+$_['entry_order_status'] = 'Статус замовлення:'; #40964
+$_['entry_geo_zone'] = 'Гео-зона:'; #40965
+$_['entry_status'] = 'Статус:'; #40966
+$_['entry_sort_order'] = 'Порядок сортування:'; #40967
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань WorldPay!'; #40968
+$_['error_merchant'] = 'Необхідно вказати код транзакції!'; #40969
+$_['error_password'] = 'Необхідно вказати пароль!'; #40970

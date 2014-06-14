@@ -1,23 +1,16 @@
 <?php
-// Heading
-$_['heading_title']      = '2Checkout';
-
-// Text 
-$_['text_payment']       = 'Payment';
-$_['text_success']       = 'Success: You have modified 2Checkout account details!';
-
-// Entry
-$_['entry_account']      = '2Checkout Account ID:';
-$_['entry_secret']       = 'Secret Word:<br /><span class="help">The secret word to confirm transactions with (must be the same as defined on the merchat account configuration page.</span>';
-$_['entry_test']         = 'Test Mode:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment 2Checkout!';
-$_['error_account']      = 'Account No. Required!';
-$_['error_secret']       = 'Secret Word Required!';
-?>
+$_['heading_title'] = '2Checkout'; #41063
+$_['text_payment'] = 'Оплата'; #41064
+$_['text_success'] = 'Налаштування 2Checkout змінено!'; #41065
+$_['text_twocheckout'] = '<a onclick="window.open(\'http://www.2checkout.com\');"><img src="view/image/payment/2checkout.png" alt="2Checkout" title="2Checkout" style="border: 1px solid #EEEEEE;" /></a>'; #42993
+$_['entry_account'] = 'Код облікового запису в системі 2Checkout:'; #41066
+$_['entry_secret'] = 'Секретне слово:<br /><span class="help">Секретне слово використовується для підтвердження транзакцій. Встановіть цей параметр на сторінці налаштувань 2Checkout</span>'; #41067
+$_['entry_test'] = 'Режим тестування:'; #41068
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42770
+$_['entry_order_status'] = 'Статус замовлення:'; #41069
+$_['entry_geo_zone'] = 'Гео-зона:'; #41070
+$_['entry_status'] = 'Статус:'; #41071
+$_['entry_sort_order'] = 'Порядок сортування:'; #41072
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань 2Checkout!'; #41073
+$_['error_account'] = 'Необхідно вказати код облікового запису!'; #41074
+$_['error_secret'] = 'Необхідно вказати секретне слово!'; #41075

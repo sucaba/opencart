@@ -1,15 +1,9 @@
 <?php
-// Heading
-$_['heading_title']     = 'Отчёт об онлайн пользователях';
-
-// Text 
-$_['text_guest']        = 'Гость';
- 
-// Column
-$_['column_ip']         = 'IP';
-$_['column_customer']   = 'покупатель';
-$_['column_url']        = 'Последняя посещенная страница';
-$_['column_referer']    = 'Откуда пришёл';
-$_['column_date_added'] = 'Последний клик';
-$_['column_action']     = 'Действие';
-?>
+$_['heading_title'] = 'Звіт про клієнтів онлайн'; #43460
+$_['text_guest'] = 'Гість'; #43424
+$_['column_ip'] = 'IP'; #43425
+$_['column_customer'] = 'Клієнт'; #43426
+$_['column_url'] = 'Остання переглянута сторінка'; #43427
+$_['column_referer'] = 'З відкіля прийшов'; #43428
+$_['column_date_added'] = 'Останній перехід'; #43461
+$_['column_action'] = 'Дія'; #43429

@@ -1,20 +1,15 @@
 <?php
-// Heading
-$_['heading_title']      = 'Paymate';
-
-// Text 
-$_['text_payment']       = 'Payment';
-$_['text_success']       = 'Success: You have modified Paymate account details!';
-
-// Entry
-$_['entry_username']     = 'Paymate Username:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment Paymate!';
-$_['error_username']     = 'Paymate Username required!';
-?>
+$_['heading_title'] = 'Paymate'; #40660
+$_['text_payment'] = 'Оплата'; #40661
+$_['text_success'] = 'Налаштування рахунку Paymate змінено!'; #41016
+$_['entry_username'] = 'Логін Paymate:'; #40662
+$_['entry_password'] = 'Пароль:<br /><span class="help">Використовуйте випадковий пароль. Ця інформація буде використовуватися, щоб переконатися, що платіжна інформація не перехоплена при його передачі в платіжний шлюз.</span>'; #43156
+$_['entry_test'] = 'Режим тестування:'; #43157
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42761
+$_['entry_order_status'] = 'Статус замовлення:'; #40663
+$_['entry_geo_zone'] = 'Гео-зона:'; #40664
+$_['entry_status'] = 'Статус:'; #40665
+$_['entry_sort_order'] = 'Порядок сортування:'; #41324
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань Paymate!'; #41325
+$_['error_username'] = 'Необхідно вказати логін в системі Paymate!'; #41326
+$_['error_password'] = 'Необхідно вказати пароль!'; #43158

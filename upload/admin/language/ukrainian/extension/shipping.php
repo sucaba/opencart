@@ -1,17 +1,9 @@
 <?php
-// Heading
-$_['heading_title']     = 'Доставка';
-
-// Text
-$_['text_install']      = 'Установить';
-$_['text_uninstall']    = 'Удалить';
-
-// Column
-$_['column_name']       = 'Способ доставки';
-$_['column_status']     = 'Статус';
-$_['column_sort_order'] = 'Порядок сортировки';
-$_['column_action']     = 'Действие';
-
-// Error
-$_['error_permission']  = 'У Вас нет прав для управления доставкой!';
-?>
+$_['heading_title'] = 'Доставка'; #39865
+$_['text_install'] = 'Інсталювати'; #39866
+$_['text_uninstall'] = 'Деінсталювати'; #39867
+$_['column_name'] = 'Метод доставки'; #39868
+$_['column_status'] = 'Статус'; #39869
+$_['column_sort_order'] = 'Порядок сортування'; #39870
+$_['column_action'] = 'Дія'; #39871
+$_['error_permission'] = 'Ви не маєте повноважень для редагування методів доставки!'; #40418

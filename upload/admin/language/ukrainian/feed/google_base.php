@@ -1,15 +1,7 @@
 <?php
-// Heading
-$_['heading_title']    = 'Google Base';
-
-// Text   
-$_['text_feed']        = 'Каналы продвижения';
-$_['text_success']     = 'Настройки модуля обновлены!';
-
-// Entry
-$_['entry_status']     = 'Статус:';
-$_['entry_data_feed']  = 'URL канала:';
-
-// Error
-$_['error_permission'] = 'У Вас нет прав для управления этим модулем!';
-?>
+$_['heading_title'] = 'Google Base'; #40710
+$_['text_feed'] = 'Канали товарів'; #40706
+$_['text_success'] = 'Налаштування Google Base успішно змінено!'; #40711
+$_['entry_status'] = 'Статус:'; #40707
+$_['entry_data_feed'] = 'Веб-адреса каналу:'; #40712
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань  Google Base!'; #40713

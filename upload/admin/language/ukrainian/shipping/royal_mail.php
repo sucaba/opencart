@@ -1,31 +1,36 @@
 <?php
-// Heading 
-$_['heading_title']             = 'Royal Mail';
-
-// Text
-$_['text_shipping']             = 'Shipping';
-$_['text_success']              = 'Success: You have modified Royal Mail shipping!';
-$_['text_1st_class_standard']   = 'First Class Standard Post';
-$_['text_1st_class_recorded']   = 'First Class Recorded Post';
-$_['text_2nd_class_standard']   = 'Second Class Standard Post';
-$_['text_2nd_class_recorded']   = 'Second Class Recorded Post';
-$_['text_standard_parcels']     = 'Standard Parcels';
-$_['text_airmail']              = 'Airmail';
-$_['text_international_signed'] = 'International Signed';
-$_['text_airsure']              = 'Airsure';
-$_['text_surface']              = 'Surface';
-
-// Entry
-$_['entry_service']             = 'Services:';
-$_['entry_display_weight']      = 'Display Delivery Weight:<br /><span class="help">Do you want to display the shipping weight? (e.g. Delivery Weight : 2.7674 Kg\'s)</span>';
-$_['entry_display_insurance']   = 'Display Insurance:<br /><span class="help">Do you want to display the shipping insurance? (e.g. Insured upto &pound;500)</span>';
-$_['entry_display_time']        = 'Display Delivery Time:<br /><span class="help">Do you want to display the shipping time? (e.g. Ships within 3 to 5 days)</span>';
-$_['entry_weight_class']        = 'Weight Class:';
-$_['entry_tax']                 = 'Tax Class:';
-$_['entry_geo_zone']            = 'Geo Zone:';
-$_['entry_status']              = 'Status:';
-$_['entry_sort_order']          = 'Sort Order:';
-
-// Error
-$_['error_permission']          = 'Warning: You do not have permission to modify Royal Mail shipping!';
-?>
+$_['heading_title'] = 'Royal Mail'; #41105
+$_['text_shipping'] = 'Доставка'; #41106
+$_['text_success'] = 'Налаштування Royal Mail змінено!'; #41107
+$_['entry_rate'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість, і т.д...</span>'; #42971
+$_['entry_insurance'] = 'Розмір компенсації:<br /><span class="help">Введіть значення до 5,2 десяткових розрядів. (12345.67)Наприклад: 34:0,100:1,250:2.25 - Страхове покриття для кошика величиною до 34 одиниць матиме надбавку 0.00, а кошик величиною від 100 до 250 одиниць матиме надбавку 2.25. Символи валюти вводити не потрібно.</span>'; #43051
+$_['entry_airmail_rate_1'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />AL, AD, AM, AT, AZ, BY, BE, BA, BG, HR, CY, CZ, DK, EE, FO, FI, FR, GE, DE, GI, GR, GL, HU, IS, IE, IT, KZ, KG, LV, LI, LT, LU, MK, MT, MD, MC, NL, NO, PL, PT, RO, RU, SM, SK, SI, ES, SE, CH, TJ, TR, TM, UA, UZ, VA</span>'; #43053
+$_['entry_airmail_rate_2'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються для всіх інших країн не вказаних вище.</span>'; #43054
+$_['entry_international_signed_rate_1'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />AL, AD, AM, AT, AZ, BY, BE, BA, BG, HR, CY, CZ, DK, EE, FO, FI, FR, GE, DE, GI, GR, GL, HU, IS, IE, IT, KZ, KG, LV, LI, LT, LU, MK, MT, MD, MC, NL, NO, PL, PT, RO, RU, SM, SK, SI, ES, SE, CH, TJ, TR, TM, UA, UZ, VA</span>'; #43055
+$_['entry_international_signed_insurance_1'] = 'Розмір компенсації:<br /><span class="help">Введіть значення до 5,2 десяткових розрядів. (12345.67)Наприклад: 34:0,100:1,250:2.25 - Страхове покриття для кошика величиною до 34 одиниць матиме надбавку 0.00, а кошик величиною від 100 до 250 одиниць матиме надбавку 2.25. Символи валюти вводити не потрібно.<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />AL, AD, AM, AT, AZ, BY, BE, BA, BG, HR, CY, CZ, DK, EE, FO, FI, FR, GE, DE, GI, GR, GL, HU, IS, IE, IT, KZ, KG, LV, LI, LT, LU, MK, MT, MD, MC, NL, NO, PL, PT, RO, RU, SM, SK, SI, ES, SE, CH, TJ, TR, TM, UA, UZ, VA</span>'; #43056
+$_['entry_international_signed_rate_2'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються для всіх інших країн не вказаних вище.</span>'; #43057
+$_['entry_international_signed_insurance_2'] = 'Розмір компенсації:<br /><span class="help">Введіть значення до 5,2 десяткових розрядів. (12345.67)Наприклад: 34:0,100:1,250:2.25 - Страхове покриття для кошика величиною до 34 одиниць матиме надбавку 0.00, а кошик величиною від 100 до 250 одиниць матиме надбавку 2.25. Символи валюти вводити не потрібно.<br /><br />Дані тарифи застосовуються для всіх інших країн не вказаних вище.</span>'; #43058
+$_['entry_airsure_rate_1'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />AD, AT, BE, CH, DE, DK, ES, FO, FI, FR, IE, IS, LI, LU, MC, NL, PT, SE</span>'; #43059
+$_['entry_airsure_insurance_1'] = 'Розмір компенсації:<br /><span class="help">Введіть значення до 5,2 десяткових розрядів. (12345.67)Наприклад: 34:0,100:1,250:2.25 - Страхове покриття для кошика величиною до 34 одиниць матиме надбавку 0.00, а кошик величиною від 100 до 250 одиниць матиме надбавку 2.25. Символи валюти вводити не потрібно.<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />AD, AT, BE, CH, DE, DK, ES, FO, FI, FR, IE, IS, LI, LU, MC, NL, PT, SE</span>'; #43060
+$_['entry_airsure_rate_2'] = 'Тарифи:<br /><span class="help">Наприклад: 5:10.00,7:12.00 Вага:Вартість,Вага:Вартість,і т.д...<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />BR, CA, HK, MY, NZ, SG, US</span>'; #43061
+$_['entry_airsure_insurance_2'] = 'Розмір компенсації:<br /><span class="help">Введіть значення до 5,2 десяткових розрядів. (12345.67)Наприклад: 34:0,100:1,250:2.25 - Страхове покриття для кошика величиною до 34 одиниць матиме надбавку 0.00, а кошик величиною від 100 до 250 одиниць матиме надбавку 2.25. Символи валюти вводити не потрібно.<br /><br />Дані тарифи застосовуються лише для країн наведених нижче:<br />BR, CA, HK, MY, NZ, SG, US</span>'; #43062
+$_['entry_display_weight'] = 'Відображати вагу пакунку:<br /><span class="help">Наприклад, 2.7674кг</span>'; #41111
+$_['entry_display_insurance'] = 'Відображати страхування:<br /><span class="help">Наприклад, 500</span>'; #41112
+$_['entry_weight_class'] = 'Вагова категорія:'; #40956
+$_['entry_tax_class'] = 'Клас податків:'; #42955
+$_['entry_geo_zone'] = 'Гео-зона:'; #41108
+$_['entry_status'] = 'Статус:'; #40957
+$_['entry_sort_order'] = 'Порядок сортування:'; #41109
+$_['tab_1st_class_standard'] = 'Стандартне повідомлення першого класу'; #42956
+$_['tab_1st_class_recorded'] = 'Записане повідомлення першого класу'; #42957
+$_['tab_2nd_class_standard'] = 'Стандартне повідомлення другого класу'; #42958
+$_['tab_2nd_class_recorded'] = 'Записане повідомлення другого класу'; #42959
+$_['tab_special_delivery_500'] = 'Спеціальна доставка наступного дня (&pound;500)'; #42960
+$_['tab_special_delivery_1000'] = 'Спеціальна доставка наступного дня (&pound;1000)'; #42961
+$_['tab_special_delivery_2500'] = 'Спеціальна доставка наступного дня (&pound;2500)'; #42962
+$_['tab_standard_parcels'] = 'Стандартні посилки'; #42963
+$_['tab_airmail'] = 'Авіапошта'; #42964
+$_['tab_international_signed'] = 'Міжнародний підпис'; #42965
+$_['tab_airsure'] = 'Рекомендована авіапошта'; #42966
+$_['tab_surface'] = 'Поверхня'; #43063
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань Royal Mail!'; #41110

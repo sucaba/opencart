@@ -1,4 +1,3 @@
 <?php
-// Text
-$_['text_footer'] = '<a href="http://myopencart.ru">ocStore</a> &copy; 2009-' . date('Y') . ' All Rights Reserved.<br />Version %s';
-?>
+
+$_['text_footer'] = '<a href="http://bellissima.kiev.ua" target="_blank">Bellissima</a><br />'; #40253

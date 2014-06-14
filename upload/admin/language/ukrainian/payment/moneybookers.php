@@ -1,27 +1,18 @@
 <?php
-// Heading
-$_['heading_title']		            = 'Moneybookers';
-
-// Text
-$_['text_payment']		            = 'Payment';
-$_['text_success']		            = 'Success: You have modified the Moneybookers details.';
-$_['text_moneybookers']	            = '<a onclick="window.open(\'https://www.moneybookers.com/app/?rid=10111486\');"><img src="view/image/payment/moneybookers.png" alt="Moneybookers" title="Moneybookers" style="border: 1px solid #EEEEEE;" /></a>';
-
-// Entry
-$_['entry_email']		            = 'E-Mail:';
-$_['entry_secret']		            = 'Secret:';
-$_['entry_total']             = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status']      = 'Order Status:';
-$_['entry_pending_status']    = 'Pending Status :';
-$_['entry_canceled_status']   = 'Canceled Status:';
-$_['entry_failed_status']     = 'Failed Status:';
-$_['entry_chargeback_status'] = 'Chargeback Status:';
-$_['entry_geo_zone']          = 'Geo Zone:';
-$_['entry_status']            = 'Status:';
-$_['entry_sort_order']        = 'Sort Order:';
-
-// Error
-$_['error_permission']	            = 'Warning: You do not have permission to modify Moneybookers!';
-$_['error_email']		            = 'E-Mail Required!';
-$_['error_secret']		            = 'Secret Key Required!';
-?>
+$_['heading_title'] = 'Moneybookers'; #40714
+$_['text_payment'] = 'Оплата'; #40648
+$_['text_success'] = 'Налаштування рахунку Moneybookers змінено!'; #41311
+$_['text_moneybookers'] = '<a onclick="window.open(\'https://www.moneybookers.com/app/?rid=10111486\');"><img src="view/image/payment/moneybookers.png" alt="Moneybookers" title="Moneybookers" style="border: 1px solid #EEEEEE;" /></a>'; #41013
+$_['entry_email'] = 'Електронна адреса:'; #40649
+$_['entry_secret'] = 'Секретний код:'; #40539
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42772
+$_['entry_order_status'] = 'Статус замовлення:'; #40650
+$_['entry_pending_status'] = 'Статус очікування:'; #42774
+$_['entry_canceled_status'] = 'Статус скасування:'; #42775
+$_['entry_failed_status'] = 'Статус відхилення:'; #42776
+$_['entry_chargeback_status'] = 'Статус відкликання:'; #42777
+$_['entry_geo_zone'] = 'Гео-зона:'; #40651
+$_['entry_status'] = 'Статус:'; #40652
+$_['entry_sort_order'] = 'Порядок сортування:'; #41312
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань Moneybookers!'; #41313
+$_['error_email'] = 'Необхідно вказати електронну адресу!'; #41314

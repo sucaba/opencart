@@ -1,21 +1,13 @@
 <?php
-// Heading
-$_['heading_title']       = 'Категории'; 
-
-// Text
-$_['text_module']         = 'Модули';
-$_['text_success']        = 'Модуль категорий успешно обновлен!';
-$_['text_content_top']    = 'Содержание шапки';
-$_['text_content_bottom'] = 'Содержание подвала';
-$_['text_column_left']    = 'Левая колонка';
-$_['text_column_right']   = 'Правая колонка';
-
-// Entry
-$_['entry_layout']        = 'Схема:';
-$_['entry_position']      = 'Расположение:';
-$_['entry_status']        = 'Статус:';
-$_['entry_sort_order']    = 'Порядок сортировки:';
-
-// Error
-$_['error_permission']    = 'У Вас нет прав для изменения модуля категорий!';
-?>
+$_['heading_title'] = 'Категорія'; #40255
+$_['text_module'] = 'Модулі'; #40413
+$_['text_success'] = 'Налаштування модуля успішно змінено!'; #41253
+$_['text_content_top'] = 'Над контентом'; #42193
+$_['text_content_bottom'] = 'Під контентом'; #42194
+$_['text_column_left'] = 'Ліва колонка'; #42195
+$_['text_column_right'] = 'Права колонка'; #42196
+$_['entry_layout'] = 'Макет:'; #42282
+$_['entry_position'] = 'Позиція:'; #40414
+$_['entry_status'] = 'Статус:'; #40415
+$_['entry_sort_order'] = 'Порядок сортування:'; #41254
+$_['error_permission'] = 'Ви не маєте повноважень для зміни модуля!'; #41255

@@ -1,18 +1,16 @@
 <?php
-// Heading
-$_['heading_title']    = 'Klarna Fee';
-
-// Text
-$_['text_total']       = 'Общая сумма заказа';
-$_['text_success']     = 'Настройки модуля обновлены!';
-
-// Entry
-$_['entry_total']      = 'Сумма заказа:';
-$_['entry_fee']        = 'Плата:';
-$_['entry_tax_class']  = 'Класс налога:';
-$_['entry_status']     = 'Статус:';
-$_['entry_sort_order'] = 'Порядок сортировки:';
-
-// Error
-$_['error_permission'] = 'У Вас нет прав для управления этим модулем!';
-?>
+$_['heading_title'] = 'Внесок Klarna'; #43372
+$_['text_total'] = 'Всі замовлення'; #43338
+$_['text_success'] = 'Успіх: Ви змінили внесок Klarna!'; #43410
+$_['text_sweden'] = 'Швеція'; #43586
+$_['text_norway'] = 'Норвегія'; #43587
+$_['text_finland'] = 'Фінляндія'; #43588
+$_['text_denmark'] = 'Данія'; #43689
+$_['text_germany'] = 'Німеччина'; #43590
+$_['text_netherlands'] = 'Нідерланди'; #43591
+$_['entry_total'] = 'Загальна сума замовлення:'; #43375
+$_['entry_fee'] = 'Внесок:'; #43351
+$_['entry_tax_class'] = 'Податковий клас:'; #43339
+$_['entry_status'] = 'Статус:'; #43340
+$_['entry_sort_order'] = 'ПОрядок сортування:'; #43373
+$_['error_permission'] = 'Увага: Ви не маєте права модифікувати Klarna внесок!'; #43376

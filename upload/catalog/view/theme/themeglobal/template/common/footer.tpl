@@ -36,12 +36,9 @@
     </ul>
   </div>
 </div>
-<!-- 
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
 <div id="powered">
-<div id="poweredtext">&copy;Copyright 2011. Powered by <a class="blue" href="http://www.opencart.com">Open Cart</a><br /><a class="s_main_color" href="http://themeglobal.com">ThemeGlobal.com - OpenCart Templates Club</a></div>
+<div id="poweredtext">&copy;Copyright 2013. Powered by <a class="blue" href="http://www.bellissima.kiev.ua">Bellissima</a><br />
+</div>
 </div>
 
 <div id="paymentimage">
@@ -56,9 +53,5 @@ Please donate via PayPal to donate@opencart.com
     <?php } ?>
 </div>	
 </div>	
-<!-- 
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
 </div>
 </body></html>

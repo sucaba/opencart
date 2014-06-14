@@ -1,31 +1,22 @@
 <?php
-// Heading
-$_['heading_title']      = 'SagePay';
-
-// Text 
-$_['text_payment']       = 'Payment'; 
-$_['text_success']       = 'Success: You have modified SagePay account details!';
-$_['text_sagepay']       = '<a onclick="window.open(\'https://support.sagepay.com/apply/default.aspx?PartnerID=E511AF91-E4A0-42DE-80B0-09C981A3FB61\');"><img src="view/image/payment/sagepay.png" alt="SagePay" title="SagePay" style="border: 1px solid #EEEEEE;" /></a>';
-$_['text_sim']           = 'Simulator';
-$_['text_test']          = 'Test';
-$_['text_live']          = 'Live';
-$_['text_payment']       = 'Payment';
-$_['text_defered']       = 'Defered';
-$_['text_authenticate']  = 'Authenticate';
-
-// Entry
-$_['entry_vendor']       = 'Vendor:';
-$_['entry_password']     = 'Password:';
-$_['entry_test']         = 'Test Mode:';
-$_['entry_transaction']  = 'Transaction Method:';
-$_['entry_total']        = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_geo_zone']     = 'Geo Zone:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
-
-// Error
-$_['error_permission']   = 'Warning: You do not have permission to modify payment SagePay!';
-$_['error_vendor']       = 'Vendor ID Required!';
-$_['error_password']     = 'Password Required!';
-?>
+$_['heading_title'] = 'SagePay'; #40971
+$_['text_payment'] = 'Оплата'; #41037
+$_['text_success'] = 'Налаштування SagePay змінено!'; #41038
+$_['text_sagepay'] = '<a onclick="window.open(\'https://support.sagepay.com/apply/default.aspx?PartnerID=E511AF91-E4A0-42DE-80B0-09C981A3FB61\');"><img src="view/image/payment/sagepay.png" alt="SagePay" title="SagePay" style="border: 1px solid #EEEEEE;" /></a>'; #41039
+$_['text_sim'] = 'Симуляція'; #40972
+$_['text_test'] = 'Тестування'; #40973
+$_['text_live'] = 'Живий режим'; #40974
+$_['text_defered'] = 'Відкладено'; #41040
+$_['text_authenticate'] = 'Авторизація'; #40975
+$_['entry_vendor'] = 'Продавець:'; #40976
+$_['entry_password'] = 'Пароль:'; #40977
+$_['entry_test'] = 'Режим тестування:'; #40978
+$_['entry_transaction'] = 'Метод транзакції:'; #40979
+$_['entry_total'] = 'Мінімальна сума замовлення:<br /><span class="help">Необхідна сума замовлення для використання цього способу оплати.</span>'; #42767
+$_['entry_order_status'] = 'Статус замовлення:'; #40980
+$_['entry_geo_zone'] = 'Гео-зона:'; #40981
+$_['entry_status'] = 'Статус:'; #40982
+$_['entry_sort_order'] = 'Порядок сортування:'; #40983
+$_['error_permission'] = 'Ви не маєте повноважень для зміни налаштувань SagePay!'; #41041
+$_['error_vendor'] = 'Необхідно вказати код продавця!'; #40984
+$_['error_password'] = 'Необхідно вказати пароль!'; #40985

@@ -1,24 +1,16 @@
 <?php
-// Heading
-$_['heading_title']     = 'Отчет по доставкам';
-
-// Text
-$_['text_year']         = 'Годы';
-$_['text_month']        = 'Месяцы';
-$_['text_week']         = 'Недели';
-$_['text_day']          = 'Дни';
-$_['text_all_status']   = 'Все статусы';
-
-// Column
-$_['column_date_start'] = 'Дата начала';
-$_['column_date_end']   = 'Дата окончания';
-$_['column_title']      = 'Название доставки';
-$_['column_orders']     = 'Кол-во заказов';
-$_['column_total']      = 'Итого';
-
-// Entry
-$_['entry_date_start']  = 'Дата начала:';
-$_['entry_date_end']    = 'Дата окончания:';
-$_['entry_group']       = 'Сортировать по:';
-$_['entry_status']      = 'Статус заказа:';
-?>
+$_['heading_title'] = 'Повідомлення про доставку'; #42916
+$_['text_year'] = 'Роки'; #42917
+$_['text_month'] = 'Місяці'; #42918
+$_['text_week'] = 'Неділі'; #42919
+$_['text_day'] = 'Дні'; #42920
+$_['text_all_status'] = 'Усі статуси'; #42921
+$_['column_date_start'] = 'Дата початку'; #42922
+$_['column_date_end'] = 'Дата завершення'; #42923
+$_['column_title'] = 'Назва доставки'; #42924
+$_['column_orders'] = 'Номери замовлень'; #42925
+$_['column_total'] = 'Всього'; #42926
+$_['entry_date_start'] = 'Дата початку:'; #42927
+$_['entry_date_end'] = 'Дата завершення:'; #42928
+$_['entry_group'] = 'Сортувати:'; #42929
+$_['entry_status'] = 'Статус замовлення:'; #42930
