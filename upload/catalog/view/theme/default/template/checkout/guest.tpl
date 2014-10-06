@@ -4,12 +4,14 @@
   <input type="text" name="firstname" value="<?php echo $firstname; ?>" class="large-field" />
   <br />
   <br />
-  <span class="required">*</span> <?php echo $entry_lastname; ?><br />
+  <span class="required">*</span> 
+<?php echo $entry_lastname; ?><br />
   <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="large-field" />
   <br />
   <br />
-  <span class="required">*</span> <?php echo $entry_email; ?><br />
-  <input type="text" name="email" value="<?php echo $email; ?>" class="large-field" />
+  <span class="required">*</span> 
+<?php echo $entry_email; ?><br />
+ <input type="text" name="email" value="<?php echo $email; ?>" class="large-field" />
   <br />
   <br />
   <span class="required">*</span> <?php echo $entry_telephone; ?><br />
@@ -19,9 +21,9 @@
   <?php echo $entry_fax; ?><br />
   <input type="text" name="fax" value="<?php echo $fax; ?>" class="large-field" />
   <br />
-  <br />
+ <br />
 </div>
-<div class="right">
+ <div class="right">
   <h2><?php echo $text_your_address; ?></h2>
   <?php echo $entry_company; ?><br />
   <input type="text" name="company" value="<?php echo $company; ?>" class="large-field" />
@@ -40,7 +42,7 @@
     <?php } ?>
     <?php } ?>
     <br />
-  </div>
+  </div> 
   <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
     <input type="text" name="company_id" value="<?php echo $company_id; ?>" class="large-field" />
     <br />

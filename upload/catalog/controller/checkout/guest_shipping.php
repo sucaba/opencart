@@ -148,11 +148,11 @@ class ControllerCheckoutGuestShipping extends Controller {
 		if (!$json) {
 			$this->session->data['guest']['shipping']['firstname'] = trim($this->request->post['firstname']);
 			$this->session->data['guest']['shipping']['lastname'] = trim($this->request->post['lastname']);
-			$this->session->data['guest']['shipping']['company'] = trim($this->request->post['company']);
+//			$this->session->data['guest']['shipping']['company'] = trim($this->request->post['company']);
 			$this->session->data['guest']['shipping']['address_1'] = $this->request->post['address_1'];
-			$this->session->data['guest']['shipping']['address_2'] = $this->request->post['address_2'];
-			$this->session->data['guest']['shipping']['postcode'] = $this->request->post['postcode'];
-			$this->session->data['guest']['shipping']['city'] = $this->request->post['city'];
+//			$this->session->data['guest']['shipping']['address_2'] = $this->request->post['address_2'];
+//			$this->session->data['guest']['shipping']['postcode'] = $this->request->post['postcode'];
+//			$this->session->data['guest']['shipping']['city'] = $this->request->post['city'];
 			$this->session->data['guest']['shipping']['country_id'] = $this->request->post['country_id'];
 			$this->session->data['guest']['shipping']['zone_id'] = $this->request->post['zone_id'];
 			

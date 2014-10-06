@@ -43,16 +43,12 @@
             <span class="error"><?php echo $error_telephone; ?></span>
             <?php } ?></td>
         </tr>
-        <tr>
-          <td><?php echo $entry_fax; ?></td>
-          <td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
-        </tr>
       </table>
     </div>
     <h2><?php echo $text_your_address; ?></h2>
     <div class="content">
       <table class="form">
-        <tr>
+        <tr style="display:none" >
           <td><?php echo $entry_company; ?></td>
           <td><input type="text" name="company" value="<?php echo $company; ?>" /></td>
         </tr>        
@@ -70,20 +66,6 @@
             <?php } ?>
             <?php } ?></td>
         </tr>      
-        <tr id="company-id-display">
-          <td><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?></td>
-          <td><input type="text" name="company_id" value="<?php echo $company_id; ?>" />
-            <?php if ($error_company_id) { ?>
-            <span class="error"><?php echo $error_company_id; ?></span>
-            <?php } ?></td>
-        </tr>
-        <tr id="tax-id-display">
-          <td><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?></td>
-          <td><input type="text" name="tax_id" value="<?php echo $tax_id; ?>" />
-            <?php if ($error_tax_id) { ?>
-            <span class="error"><?php echo $error_tax_id; ?></span>
-            <?php } ?></td>
-        </tr>
         <tr>
           <td><span class="required">*</span> <?php echo $entry_address_1; ?></td>
           <td><input type="text" name="address_1" value="<?php echo $address_1; ?>" />
@@ -101,15 +83,7 @@
             <?php if ($error_city) { ?>
             <span class="error"><?php echo $error_city; ?></span>
             <?php } ?></td>
-        </tr>
-        <tr>
-          <td><span id="postcode-required" class="required">*</span> <?php echo $entry_postcode; ?></td>
-          <td><input type="text" name="postcode" value="<?php echo $postcode; ?>" />
-            <?php if ($error_postcode) { ?>
-            <span class="error"><?php echo $error_postcode; ?></span>
-            <?php } ?></td>
-        </tr>
-        <tr>
+	<tr  style="display:none">
           <td><span class="required">*</span> <?php echo $entry_country; ?></td>
           <td><select name="country_id">
               <option value=""><?php echo $text_select; ?></option>
@@ -125,6 +99,7 @@
             <span class="error"><?php echo $error_country; ?></span>
             <?php } ?></td>
         </tr>
+                </tr>
         <tr>
           <td><span class="required">*</span> <?php echo $entry_zone; ?></td>
           <td><select name="zone_id">

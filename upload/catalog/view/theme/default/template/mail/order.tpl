@@ -112,6 +112,7 @@
   </table>
   <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_footer; ?></p>
   <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_powered; ?></p>
+  ----------
 </div>
 </body>
 </html>

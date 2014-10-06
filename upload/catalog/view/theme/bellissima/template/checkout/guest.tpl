@@ -3,10 +3,10 @@
   <span class="required">*</span> <?php echo $entry_firstname; ?><br />
   <input type="text" name="firstname" value="<?php echo $firstname; ?>" class="large-field" />
   <br />
-  <br />
-  <span class="required">*</span> <?php echo $entry_lastname; ?><br />
-  <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="large-field" />
-  <br />
+//  <br />
+//  <span class="required">*</span> <?php echo $entry_lastname; ?><br />
+//  <input type="text" name="lastname" value="<?php echo $lastname; ?>" class="large-field" />
+//  <br />
   <br />
   <span class="required">*</span> <?php echo $entry_email; ?><br />
   <input type="text" name="email" value="<?php echo $email; ?>" class="large-field" />
