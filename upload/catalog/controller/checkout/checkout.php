@@ -61,7 +61,7 @@ class ControllerCheckoutCheckout extends Controller {
 		$this->data['text_modify'] = $this->language->get('text_modify');
 
 		$this->data['logged'] = $this->customer->isLogged();
-		$this->data['shipping_required'] = $this->cart->hasShipping();	
+		$this->data['shipping_required'] = 0; //$this->cart->hasShipping();	
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/checkout.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/checkout/checkout.tpl';

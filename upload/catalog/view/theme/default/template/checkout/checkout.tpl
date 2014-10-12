@@ -719,25 +719,25 @@ $('#button-guest').live('click', function() {
 					});
 				}
 				<?php } else { ?>				
-				$.ajax({
-					url: 'index.php?route=checkout/payment_method',
-					dataType: 'html',
-					success: function(html) {
-						$('#payment-method .checkout-content').html(html);
-						
+                $.ajax({
+                    url: 'index.php?route=checkout/confirm',
+                    dataType: 'html',
+                    success: function(html) {
+                        $('#confirm .checkout-content').html(html);
+                        
 						$('#payment-address .checkout-content').slideUp('slow');
-							
-						$('#payment-method .checkout-content').slideDown('slow');
-							
+                        
+                        $('#confirm .checkout-content').slideDown('slow');
+                        
 						$('#payment-address .checkout-heading a').remove();
 						$('#payment-method .checkout-heading a').remove();
-														
+                        
 						$('#payment-address .checkout-heading').append('<a><?php echo $text_modify; ?></a>');
-					},
-					error: function(xhr, ajaxOptions, thrownError) {
-						alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-					}
-				});				
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    }
+                })
 				<?php } ?>
 			}	 
 		},
