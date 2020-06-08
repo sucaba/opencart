@@ -1,8 +1,15 @@
 <?php
 class ModelToolImage extends Model {
 	public function resize($filename, $width, $height) {
+		$width = round($width);
+		$height = round($height);
 		if (!is_file(DIR_IMAGE . $filename) || substr(str_replace('\\', '/', realpath(DIR_IMAGE . $filename)), 0, strlen(DIR_IMAGE)) != str_replace('\\', '/', DIR_IMAGE)) {
-			return;
+			if (substr($filename, 0, 7) == 'http://' || substr($filename, 0, 8) == 'https://') {
+				$style="max-height:".$height."px;max-width:".$width."px";
+				return $filename.'" style="'.$style.'"'; 
+			} else {
+				return;
+			}
 		}
 
 		$extension = pathinfo($filename, PATHINFO_EXTENSION);
