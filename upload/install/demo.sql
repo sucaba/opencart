@@ -517,8 +517,10 @@ INSERT INTO `oc_information_to_store` (`information_id`, `store_id`) VALUES
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1);
-
+ (1,'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'en-gb.png', 'english', 1, 1)
+,(2,'Українська','uk-ua','uk_UK.utf-8, uk_uk, ukrainian','uk-ua.png','ukrainian',2,1)
+,(3,'Русский','ru-ru','ru_RU.UTF-8,ru_RU,ru-gb,russian','ru-ru.png','russian',3,1)
+;
 
 --
 -- Dumping data for table `oc_layout`
