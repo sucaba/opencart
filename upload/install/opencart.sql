@@ -7548,3 +7548,32 @@ UPDATE `oc_return_reason` SET `name`='Пришол другой товар' WHER
 UPDATE `oc_return_reason` SET `name`='Ошибка заказа' WHERE (`name` = 'Order Error') AND (`language_id` = (SELECT `language_id` FROM `oc_language` WHERE `code` = 'ru-ru'));
 UPDATE `oc_return_reason` SET `name`='Неправильные детали заказа' WHERE (`name` = 'Faulty, please supply details') AND (`language_id` = (SELECT `language_id` FROM `oc_language` WHERE `code` = 'ru-ru'));
 UPDATE `oc_return_reason` SET `name`='Другое, пожалуйста, представте детали' WHERE (`name` = 'Other, please supply details') AND (`language_id` = (SELECT `language_id` FROM `oc_language` WHERE `code` = 'ru-ru'));
+
+
+-- Optimizations for OCAUX
+
+ALTER TABLE `oc_category` ADD INDEX ( `parent_id` ) ;
+ALTER TABLE `oc_category` ADD INDEX ( `top` ) ;
+ALTER TABLE `oc_category` ADD INDEX ( `sort_order` ) ;
+ALTER TABLE `oc_category` ADD INDEX ( `status` ) ;
+ALTER TABLE `oc_option` ADD INDEX ( `sort_order` ) ;
+ALTER TABLE `oc_option_description` ADD INDEX ( `name` ) ;
+ALTER TABLE `oc_option_value` ADD INDEX ( `option_id` ) ;
+ALTER TABLE `oc_option_value_description` ADD INDEX ( `option_id` ) ;
+ALTER TABLE `oc_order` ADD INDEX ( `customer_id` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `model` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `sku` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `upc` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `manufacturer_id` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `sort_order` ) ;
+ALTER TABLE `oc_product` ADD INDEX ( `status` ) ;
+ALTER TABLE `oc_product_option` ADD INDEX ( `option_id` ) ;
+ALTER TABLE `oc_product_option_value` ADD INDEX ( `product_option_id` ) ;
+ALTER TABLE `oc_product_option_value` ADD INDEX ( `product_id` ) ;
+ALTER TABLE `oc_product_option_value` ADD INDEX ( `option_id` ) ;
+ALTER TABLE `oc_product_option_value` ADD INDEX ( `option_value_id` ) ;
+ALTER TABLE `oc_seo_url` ADD INDEX ( `query` ) ;
+ALTER TABLE `oc_seo_url` ADD INDEX ( `keyword` ) ;
+ALTER TABLE `oc_user` ADD INDEX ( `username` ) ;
+ALTER TABLE `oc_user` ADD INDEX ( `password` ) ;
+ALTER TABLE `oc_user` ADD INDEX ( `email` ) ;
