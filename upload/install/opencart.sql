@@ -1443,7 +1443,11 @@ CREATE TABLE `oc_language` (
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1);
+ (1,'English', 'en-gb', 'en-US,en_US.UTF-8,en_US,en-gb,english', 'en-gb.png', 'english', 1, 1)
+,(2,'Українська','uk-ua','uk_UK.utf-8, uk_uk, ukrainian','uk-ua.png','ukrainian',2,1)
+,(3,'Русский','ru-ru','ru_RU.UTF-8,ru_RU,ru-gb,russian','ru-ru.png','russian',3,1)
+;
+
 
 -----------------------------------------------------------
 
@@ -2934,11 +2938,30 @@ CREATE TABLE `oc_stock_status` (
 -- Dumping data for table `oc_stock_status`
 --
 
+-- English
 INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
+(5, 1, 'Out Of Stock'),
+(6, 1, '2-3 Days'),
 (7, 1, 'In Stock'),
 (8, 1, 'Pre-Order'),
-(5, 1, 'Out Of Stock'),
-(6, 1, '2-3 Days');
+(9, 1, 'Withdrawn from production')
+;
+
+-- Ukranian
+INSERT INTO oc_stock_status (stock_status_id, language_id, name) VALUES
+(5, 2, 'Немає на Складі'),
+(6, 2, '2-3 Дні'),
+(7, 2, 'В Наявності'),
+(8, 2, 'Попереднє Замовлення'),
+(9, 2, 'Знятий з вирорбництва');
+
+-- Russian
+INSERT INTO oc_stock_status (stock_status_id, language_id, name) VALUES
+(5, 3, 'Нет на Складе'),
+(6, 3, '2-3 Дня'),
+(7, 3, 'Есть в Наличии'),
+(8, 3, 'Пред. Заказ'),
+(9, 3, 'Снят с производства');
 
 -----------------------------------------------------------
 
